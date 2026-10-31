@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="zk_app_utils_class_8h" kind="file" language="C++">
+    <compoundname>zkAppUtilsClass.h</compoundname>
+    <includes local="yes">zk_app_utils.h</includes>
+    <includes local="no">exception</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>C++/zkAppUtilsClass.h</label>
+        <link refid="zk_app_utils_class_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>exception</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+      <node id="2">
+        <label>zk_app_utils.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classzk_app_utils_1_1common_exception" prot="public">zkAppUtils::commonException</innerclass>
+    <innerclass refid="classzk_app_utils_1_1timeout_exception" prot="public">zkAppUtils::timeoutException</innerclass>
+    <innerclass refid="classzk_app_utils_1_1recovery_strategy_base_type" prot="public">zkAppUtils::recoveryStrategyBaseType</innerclass>
+    <innerclass refid="classzk_app_utils_1_1recovery_strategy_b_i_p39" prot="public">zkAppUtils::recoveryStrategyBIP39</innerclass>
+    <innerclass refid="classzk_app_utils_1_1recovery_strategy_s_l_i_p39" prot="public">zkAppUtils::recoveryStrategySLIP39</innerclass>
+    <innerclass refid="structzk_app_utils_1_1accel_data" prot="public">zkAppUtils::accelData</innerclass>
+    <innerclass refid="classzk_app_utils_1_1zk_class" prot="public">zkAppUtils::zkClass</innerclass>
+    <innernamespace refid="namespacezk_app_utils">zkAppUtils</innernamespace>
+    <briefdescription>
+<para>C++ interface to Zymkey Application Utilities Library. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="version"><para>1.2.0 </para>
+</simplesect>
+<simplesect kind="copyright"><para>Zymbit Technologies, Inc.</para>
+</simplesect>
+This file contains the C++ API to the the Zymkey Application Utilities library, <computeroutput>libzkAppUtilsClassCPP</computeroutput>. Systems intending to run such applications require that the <computeroutput>libzkapputils-c++</computeroutput> package be installed.</para>
+<para>This class facilitates writing user space applications which use Zymkey to perform cryptographic operations, such as:<orderedlist>
+<listitem><para>Signing of payloads using ECDSA</para>
+</listitem><listitem><para>Verification of payloads that were signed using Zymkey</para>
+</listitem><listitem><para>Exporting the public key that matches Zymkey&apos;s private key</para>
+</listitem><listitem><para>&quot;Locking&quot; and &quot;unlocking&quot; data objects</para>
+</listitem><listitem><para>Generating random data Additionally, there are functions for changing the i2c address (i2c units only), setting tap sensitivity and controlling the LED.</para>
+</listitem></orderedlist>
+</para>
+<para>Developers wishing to build applications which utilize the <computeroutput>libzkAppUtilsClassCPP</computeroutput> library should additionally install the <computeroutput>libzkapputils-c++-dev</computeroutput> package, which contains the necessary development files for the Zymkey&apos;s C++ library. To install this package on a system that does not need to run the applications (e.g. a Docker container or when cross compiling on another architecture), use <computeroutput>apt install --no-install-recommends libzkapputils-c++-dev</computeroutput>. This will prevent <computeroutput>apt</computeroutput> from installing the Zymkey&apos;s <computeroutput>zkifc</computeroutput> driver daemon.</para>
+<para>Usage: <verbatim>#include &lt;zymkey/zkAppUtilsClass.h&gt;
+</verbatim> To add <computeroutput>libzkAppUtilsClassCPP</computeroutput> as a dependency of a CMake-based project, add the following lines to your project&apos;s <computeroutput>CMakeLists.txt</computeroutput>: <verbatim>find_package(zkAppUtilsCXX REQUIRED)
+target_link_libraries(target_name PRIVATE zkAppUtilsCXX::zkAppUtilsClassCPP)
+</verbatim> Statically linking to the library is also supported within CMake by way of the <computeroutput>zkAppUtilsCXX::zkAppUtilsClassCPP_static</computeroutput> link item.</para>
+<para>Other projects may likewise configure the library dependency via <computeroutput>pkg-config</computeroutput>: <verbatim>CFLAGS=&quot;$(pkg-config --cflags zkapputils-c++)&quot;
+LDFLAGS=&quot;$(pkg-config --libs zkapputils-c++)&quot; 
+</verbatim> </para>
+    </detaileddescription>
+    <location file="C++/zkAppUtilsClass.h"/>
+  </compounddef>
+</doxygen>

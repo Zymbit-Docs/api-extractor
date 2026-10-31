@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "api-extractor"
+version = "0.1.0"
+description = "Extracts API reference data from Zymbit library sources as JSON for docs.zymbit.com"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+api-extractor = "api_extractor.__main__:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structzk_accel_axis_data_type" kind="struct" language="C++" prot="public">
+    <compoundname>zkAccelAxisDataType</compoundname>
+    <includes refid="zk__app__utils_8h" local="no">zk_app_utils.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structzk_accel_axis_data_type_1a0b0263b57b8cfdee66bc8ba88832f30a" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double zkAccelAxisDataType::g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <qualifiedname>zkAccelAxisDataType::g</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>the axis reading in units of g-force </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zk_app_utils.h" line="131" column="12" bodyfile="zk_app_utils.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structzk_accel_axis_data_type_1af3b1fd34e286b65f39293b9035460966" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int zkAccelAxisDataType::tapDirection</definition>
+        <argsstring></argsstring>
+        <name>tapDirection</name>
+        <qualifiedname>zkAccelAxisDataType::tapDirection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>the direction of the force along the axis which caused a tap event: -1 = negative +1 = positive 0 = did not cause a tap event </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="zk_app_utils.h" line="132" column="9" bodyfile="zk_app_utils.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>zkGetAccelerometer data output. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="zk_app_utils.h" line="129" column="1" bodyfile="zk_app_utils.h" bodystart="130" bodyend="137"/>
+    <listofallmembers>
+      <member refid="structzk_accel_axis_data_type_1a0b0263b57b8cfdee66bc8ba88832f30a" prot="public" virt="non-virtual"><scope>zkAccelAxisDataType</scope><name>g</name></member>
+      <member refid="structzk_accel_axis_data_type_1af3b1fd34e286b65f39293b9035460966" prot="public" virt="non-virtual"><scope>zkAccelAxisDataType</scope><name>tapDirection</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
