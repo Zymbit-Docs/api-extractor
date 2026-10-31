@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classzk_app_utils_1_1recovery_strategy_base_type" kind="class" language="C++" prot="public">
+    <compoundname>zkAppUtils::recoveryStrategyBaseType</compoundname>
+    <derivedcompoundref refid="classzk_app_utils_1_1recovery_strategy_b_i_p39" prot="public" virt="non-virtual">zkAppUtils::recoveryStrategyBIP39</derivedcompoundref>
+    <derivedcompoundref refid="classzk_app_utils_1_1recovery_strategy_s_l_i_p39" prot="public" virt="non-virtual">zkAppUtils::recoveryStrategySLIP39</derivedcompoundref>
+    <includes refid="zk_app_utils_class_8h" local="no">zkAppUtilsClass.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classzk_app_utils_1_1recovery_strategy_base_type_1ab69e4026f5e5cb91f5b87ae1dbbcbbbb" prot="protected" static="no" mutable="no">
+        <type>ZK_RECOVERY_STRATEGY</type>
+        <definition>ZK_RECOVERY_STRATEGY zkAppUtils::recoveryStrategyBaseType::recoveryStrategy</definition>
+        <argsstring></argsstring>
+        <name>recoveryStrategy</name>
+        <qualifiedname>zkAppUtils::recoveryStrategyBaseType::recoveryStrategy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="118" column="28" bodyfile="C++/zkAppUtilsClass.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classzk_app_utils_1_1recovery_strategy_base_type_1a64bc26e7ad61c2d645a1acb1f2df5b9f" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string zkAppUtils::recoveryStrategyBaseType::variant</definition>
+        <argsstring></argsstring>
+        <name>variant</name>
+        <qualifiedname>zkAppUtils::recoveryStrategyBaseType::variant</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="119" column="19" bodyfile="C++/zkAppUtilsClass.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classzk_app_utils_1_1recovery_strategy_base_type_1ad121e69cc920c187d823b223e791004e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>zkAppUtils::recoveryStrategyBaseType::recoveryStrategyBaseType</definition>
+        <argsstring>(const std::string &amp;key_variant=&quot;&quot;)</argsstring>
+        <name>recoveryStrategyBaseType</name>
+        <qualifiedname>zkAppUtils::recoveryStrategyBaseType::recoveryStrategyBaseType</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key_variant</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="122" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classzk_app_utils_1_1recovery_strategy_base_type_1a0f53c832b83b15bc484810ed27c3f348" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>zkAppUtils::recoveryStrategyBaseType::~recoveryStrategyBaseType</definition>
+        <argsstring>()</argsstring>
+        <name>~recoveryStrategyBaseType</name>
+        <qualifiedname>zkAppUtils::recoveryStrategyBaseType::~recoveryStrategyBaseType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="123" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classzk_app_utils_1_1recovery_strategy_base_type_1a01d29cc209df6b64c98d8e7a18d4e53a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>ZK_RECOVERY_STRATEGY</type>
+        <definition>ZK_RECOVERY_STRATEGY zkAppUtils::recoveryStrategyBaseType::getRecoveryStrategy</definition>
+        <argsstring>() const</argsstring>
+        <name>getRecoveryStrategy</name>
+        <qualifiedname>zkAppUtils::recoveryStrategyBaseType::getRecoveryStrategy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="125" column="28" bodyfile="C++/zkAppUtilsClass.h" bodystart="125" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classzk_app_utils_1_1recovery_strategy_base_type_1a226a73e41bdea4be682526934c6bf1d2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void zkAppUtils::recoveryStrategyBaseType::setVariant</definition>
+        <argsstring>(const std::string &amp;key_variant)</argsstring>
+        <name>setVariant</name>
+        <qualifiedname>zkAppUtils::recoveryStrategyBaseType::setVariant</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key_variant</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="127" column="12" bodyfile="C++/zkAppUtilsClass.h" bodystart="127" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classzk_app_utils_1_1recovery_strategy_base_type_1a491c7c16800212b22ef5252a517c8745" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string zkAppUtils::recoveryStrategyBaseType::getVariant</definition>
+        <argsstring>() const</argsstring>
+        <name>getVariant</name>
+        <qualifiedname>zkAppUtils::recoveryStrategyBaseType::getVariant</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="128" column="19" bodyfile="C++/zkAppUtilsClass.h" bodystart="128" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classzk_app_utils_1_1recovery_strategy_base_type_1a16415ed8c4c0f1382cdab19ad02b0b37" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>virtual std::string zkAppUtils::recoveryStrategyBaseType::getPassPhrase</definition>
+        <argsstring>() const</argsstring>
+        <name>getPassPhrase</name>
+        <qualifiedname>zkAppUtils::recoveryStrategyBaseType::getPassPhrase</qualifiedname>
+        <reimplementedby refid="classzk_app_utils_1_1recovery_strategy_b_i_p39_1ac685ed29676c694fa18da237ed0a6c1e">getPassPhrase</reimplementedby>
+        <reimplementedby refid="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1a20c94db2f768a96c6e63f57a1bb70dc1">getPassPhrase</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="130" column="27" bodyfile="C++/zkAppUtilsClass.h" bodystart="130" bodyend="130"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Class used for retrieval of recovery mnemonic for Bip32 wallet. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>zkAppUtils::recoveryStrategyBIP39</label>
+        <link refid="classzk_app_utils_1_1recovery_strategy_b_i_p39"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>zkAppUtils::recoveryStrategyBaseType</label>
+        <link refid="classzk_app_utils_1_1recovery_strategy_base_type"/>
+      </node>
+      <node id="3">
+        <label>zkAppUtils::recoveryStrategySLIP39</label>
+        <link refid="classzk_app_utils_1_1recovery_strategy_s_l_i_p39"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="C++/zkAppUtilsClass.h" line="115" column="1" bodyfile="C++/zkAppUtilsClass.h" bodystart="116" bodyend="131"/>
+    <listofallmembers>
+      <member refid="classzk_app_utils_1_1recovery_strategy_base_type_1a16415ed8c4c0f1382cdab19ad02b0b37" prot="public" virt="virtual"><scope>zkAppUtils::recoveryStrategyBaseType</scope><name>getPassPhrase</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_base_type_1a01d29cc209df6b64c98d8e7a18d4e53a" prot="public" virt="non-virtual"><scope>zkAppUtils::recoveryStrategyBaseType</scope><name>getRecoveryStrategy</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_base_type_1a491c7c16800212b22ef5252a517c8745" prot="public" virt="non-virtual"><scope>zkAppUtils::recoveryStrategyBaseType</scope><name>getVariant</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_base_type_1ab69e4026f5e5cb91f5b87ae1dbbcbbbb" prot="protected" virt="non-virtual"><scope>zkAppUtils::recoveryStrategyBaseType</scope><name>recoveryStrategy</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_base_type_1ad121e69cc920c187d823b223e791004e" prot="public" virt="non-virtual"><scope>zkAppUtils::recoveryStrategyBaseType</scope><name>recoveryStrategyBaseType</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_base_type_1a226a73e41bdea4be682526934c6bf1d2" prot="public" virt="non-virtual"><scope>zkAppUtils::recoveryStrategyBaseType</scope><name>setVariant</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_base_type_1a64bc26e7ad61c2d645a1acb1f2df5b9f" prot="protected" virt="non-virtual"><scope>zkAppUtils::recoveryStrategyBaseType</scope><name>variant</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_base_type_1a0f53c832b83b15bc484810ed27c3f348" prot="public" virt="non-virtual"><scope>zkAppUtils::recoveryStrategyBaseType</scope><name>~recoveryStrategyBaseType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

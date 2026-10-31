@@ -1,0 +1,284 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classzk_app_utils_1_1recovery_strategy_s_l_i_p39" kind="class" language="C++" prot="public">
+    <compoundname>zkAppUtils::recoveryStrategySLIP39</compoundname>
+    <basecompoundref refid="classzk_app_utils_1_1recovery_strategy_base_type" prot="public" virt="non-virtual">zkAppUtils::recoveryStrategyBaseType</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1a2321d1df025ed896e3b30da9c2f8aa3a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int zkAppUtils::recoveryStrategySLIP39::groupCount</definition>
+        <argsstring></argsstring>
+        <name>groupCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="159" column="11" bodyfile="C++/zkAppUtilsClass.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1af3488f745ae476f3465dda5572e156fe" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int zkAppUtils::recoveryStrategySLIP39::groupThreshold</definition>
+        <argsstring></argsstring>
+        <name>groupThreshold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="160" column="11" bodyfile="C++/zkAppUtilsClass.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1a76a8272fa9894a4612840fa933612a6d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int zkAppUtils::recoveryStrategySLIP39::iterationExponent</definition>
+        <argsstring></argsstring>
+        <name>iterationExponent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="161" column="11" bodyfile="C++/zkAppUtilsClass.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1a75c330205908eb8288f7f3afffbc9090" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string zkAppUtils::recoveryStrategySLIP39::passPhrase</definition>
+        <argsstring></argsstring>
+        <name>passPhrase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="162" column="19" bodyfile="C++/zkAppUtilsClass.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1a0647823f6b95d36d292e1e31afcf549a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>zkAppUtils::recoveryStrategySLIP39::recoveryStrategySLIP39</definition>
+        <argsstring>(int group_count, int group_threshold, int iteration_exponent, const std::string &amp;passphrase=&quot;&quot;, const std::string &amp;key_variant=&quot;&quot;)</argsstring>
+        <name>recoveryStrategySLIP39</name>
+        <param>
+          <type>int</type>
+          <declname>group_count</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>group_threshold</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>iteration_exponent</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>passphrase</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key_variant</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="166" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1a045bfb0191290fc5c952db2af39f5306" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>zkAppUtils::recoveryStrategySLIP39::~recoveryStrategySLIP39</definition>
+        <argsstring>()</argsstring>
+        <name>~recoveryStrategySLIP39</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="171" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1aea3b19fe261a0d19ab8ba85b6be3c844" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void zkAppUtils::recoveryStrategySLIP39::setPassPhrase</definition>
+        <argsstring>(const std::string &amp;passphrase)</argsstring>
+        <name>setPassPhrase</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>passphrase</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="173" column="12" bodyfile="C++/zkAppUtilsClass.h" bodystart="173" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1a20c94db2f768a96c6e63f57a1bb70dc1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string zkAppUtils::recoveryStrategySLIP39::getPassPhrase</definition>
+        <argsstring>() const</argsstring>
+        <name>getPassPhrase</name>
+        <reimplements refid="classzk_app_utils_1_1recovery_strategy_base_type_1a16415ed8c4c0f1382cdab19ad02b0b37">getPassPhrase</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="174" column="19" bodyfile="C++/zkAppUtilsClass.h" bodystart="174" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1a842ac641957b43d12fd915d20920cd54" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void zkAppUtils::recoveryStrategySLIP39::setGroupCount</definition>
+        <argsstring>(int group_count)</argsstring>
+        <name>setGroupCount</name>
+        <param>
+          <type>int</type>
+          <declname>group_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="176" column="12" bodyfile="C++/zkAppUtilsClass.h" bodystart="176" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1a52daf145f639080964cca346b6da8cbb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int zkAppUtils::recoveryStrategySLIP39::getGroupCount</definition>
+        <argsstring>() const</argsstring>
+        <name>getGroupCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="177" column="11" bodyfile="C++/zkAppUtilsClass.h" bodystart="177" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1a42eaf376ac34a8ca1c8af4d799720f2c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void zkAppUtils::recoveryStrategySLIP39::setGroupThreshold</definition>
+        <argsstring>(int group_threshold)</argsstring>
+        <name>setGroupThreshold</name>
+        <param>
+          <type>int</type>
+          <declname>group_threshold</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="179" column="12" bodyfile="C++/zkAppUtilsClass.h" bodystart="179" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1a1cb94cd5c4241a3e23a2878d3cb067c1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int zkAppUtils::recoveryStrategySLIP39::getGroupThreshold</definition>
+        <argsstring>() const</argsstring>
+        <name>getGroupThreshold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="180" column="11" bodyfile="C++/zkAppUtilsClass.h" bodystart="180" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1ac2a46dbe5fc0839b82ce6d7f109ee67c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void zkAppUtils::recoveryStrategySLIP39::setIterationExponent</definition>
+        <argsstring>(int iteration_exponent)</argsstring>
+        <name>setIterationExponent</name>
+        <param>
+          <type>int</type>
+          <declname>iteration_exponent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="182" column="12" bodyfile="C++/zkAppUtilsClass.h" bodystart="182" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1a8d32ad728c5a16beeea2d380526b910d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int zkAppUtils::recoveryStrategySLIP39::getIterationExponent</definition>
+        <argsstring>() const</argsstring>
+        <name>getIterationExponent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="183" column="11" bodyfile="C++/zkAppUtilsClass.h" bodystart="183" bodyend="183"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>zkAppUtils::recoveryStrategySLIP39</label>
+        <link refid="classzk_app_utils_1_1recovery_strategy_s_l_i_p39"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>zkAppUtils::recoveryStrategyBaseType</label>
+        <link refid="classzk_app_utils_1_1recovery_strategy_base_type"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>zkAppUtils::recoveryStrategySLIP39</label>
+        <link refid="classzk_app_utils_1_1recovery_strategy_s_l_i_p39"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>zkAppUtils::recoveryStrategyBaseType</label>
+        <link refid="classzk_app_utils_1_1recovery_strategy_base_type"/>
+      </node>
+    </collaborationgraph>
+    <location file="C++/zkAppUtilsClass.h" line="156" column="1" bodyfile="C++/zkAppUtilsClass.h" bodystart="157" bodyend="184"/>
+    <listofallmembers>
+      <member refid="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1a52daf145f639080964cca346b6da8cbb" prot="public" virt="non-virtual"><scope>zkAppUtils::recoveryStrategySLIP39</scope><name>getGroupCount</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1a1cb94cd5c4241a3e23a2878d3cb067c1" prot="public" virt="non-virtual"><scope>zkAppUtils::recoveryStrategySLIP39</scope><name>getGroupThreshold</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1a8d32ad728c5a16beeea2d380526b910d" prot="public" virt="non-virtual"><scope>zkAppUtils::recoveryStrategySLIP39</scope><name>getIterationExponent</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1a20c94db2f768a96c6e63f57a1bb70dc1" prot="public" virt="virtual"><scope>zkAppUtils::recoveryStrategySLIP39</scope><name>getPassPhrase</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_base_type_1a01d29cc209df6b64c98d8e7a18d4e53a" prot="public" virt="non-virtual"><scope>zkAppUtils::recoveryStrategySLIP39</scope><name>getRecoveryStrategy</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_base_type_1a491c7c16800212b22ef5252a517c8745" prot="public" virt="non-virtual"><scope>zkAppUtils::recoveryStrategySLIP39</scope><name>getVariant</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1a2321d1df025ed896e3b30da9c2f8aa3a" prot="private" virt="non-virtual"><scope>zkAppUtils::recoveryStrategySLIP39</scope><name>groupCount</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1af3488f745ae476f3465dda5572e156fe" prot="private" virt="non-virtual"><scope>zkAppUtils::recoveryStrategySLIP39</scope><name>groupThreshold</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1a76a8272fa9894a4612840fa933612a6d" prot="private" virt="non-virtual"><scope>zkAppUtils::recoveryStrategySLIP39</scope><name>iterationExponent</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1a75c330205908eb8288f7f3afffbc9090" prot="private" virt="non-virtual"><scope>zkAppUtils::recoveryStrategySLIP39</scope><name>passPhrase</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_base_type_1ab69e4026f5e5cb91f5b87ae1dbbcbbbb" prot="protected" virt="non-virtual"><scope>zkAppUtils::recoveryStrategySLIP39</scope><name>recoveryStrategy</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_base_type_1ad121e69cc920c187d823b223e791004e" prot="public" virt="non-virtual"><scope>zkAppUtils::recoveryStrategySLIP39</scope><name>recoveryStrategyBaseType</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1a0647823f6b95d36d292e1e31afcf549a" prot="public" virt="non-virtual"><scope>zkAppUtils::recoveryStrategySLIP39</scope><name>recoveryStrategySLIP39</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1a842ac641957b43d12fd915d20920cd54" prot="public" virt="non-virtual"><scope>zkAppUtils::recoveryStrategySLIP39</scope><name>setGroupCount</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1a42eaf376ac34a8ca1c8af4d799720f2c" prot="public" virt="non-virtual"><scope>zkAppUtils::recoveryStrategySLIP39</scope><name>setGroupThreshold</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1ac2a46dbe5fc0839b82ce6d7f109ee67c" prot="public" virt="non-virtual"><scope>zkAppUtils::recoveryStrategySLIP39</scope><name>setIterationExponent</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1aea3b19fe261a0d19ab8ba85b6be3c844" prot="public" virt="non-virtual"><scope>zkAppUtils::recoveryStrategySLIP39</scope><name>setPassPhrase</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_base_type_1a226a73e41bdea4be682526934c6bf1d2" prot="public" virt="non-virtual"><scope>zkAppUtils::recoveryStrategySLIP39</scope><name>setVariant</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_base_type_1a64bc26e7ad61c2d645a1acb1f2df5b9f" prot="protected" virt="non-virtual"><scope>zkAppUtils::recoveryStrategySLIP39</scope><name>variant</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_base_type_1a0f53c832b83b15bc484810ed27c3f348" prot="public" virt="non-virtual"><scope>zkAppUtils::recoveryStrategySLIP39</scope><name>~recoveryStrategyBaseType</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_s_l_i_p39_1a045bfb0191290fc5c952db2af39f5306" prot="public" virt="non-virtual"><scope>zkAppUtils::recoveryStrategySLIP39</scope><name>~recoveryStrategySLIP39</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

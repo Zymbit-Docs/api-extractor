@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classzk_app_utils_1_1recovery_strategy_b_i_p39" kind="class" language="C++" prot="public">
+    <compoundname>zkAppUtils::recoveryStrategyBIP39</compoundname>
+    <basecompoundref refid="classzk_app_utils_1_1recovery_strategy_base_type" prot="public" virt="non-virtual">zkAppUtils::recoveryStrategyBaseType</basecompoundref>
+    <includes refid="zk_app_utils_class_8h" local="no">zkAppUtilsClass.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classzk_app_utils_1_1recovery_strategy_b_i_p39_1abc4104c4fff42d9638c60798e6a967b3" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string zkAppUtils::recoveryStrategyBIP39::passPhrase</definition>
+        <argsstring></argsstring>
+        <name>passPhrase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="144" column="19" bodyfile="C++/zkAppUtilsClass.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classzk_app_utils_1_1recovery_strategy_b_i_p39_1a5aa5fb926bc33091691218aa30c11fba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>zkAppUtils::recoveryStrategyBIP39::recoveryStrategyBIP39</definition>
+        <argsstring>(const std::string &amp;passphrase=&quot;&quot;, const std::string &amp;key_variant=&quot;&quot;)</argsstring>
+        <name>recoveryStrategyBIP39</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>passphrase</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key_variant</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="148" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classzk_app_utils_1_1recovery_strategy_b_i_p39_1a6692050ccaadff2943c0a396e6962be6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>zkAppUtils::recoveryStrategyBIP39::~recoveryStrategyBIP39</definition>
+        <argsstring>()</argsstring>
+        <name>~recoveryStrategyBIP39</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="150" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classzk_app_utils_1_1recovery_strategy_b_i_p39_1ac1c9b9b721be60e9e6bf7567db97322f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void zkAppUtils::recoveryStrategyBIP39::setPassPhrase</definition>
+        <argsstring>(const std::string &amp;passphrase)</argsstring>
+        <name>setPassPhrase</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>passphrase</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="152" column="12" bodyfile="C++/zkAppUtilsClass.h" bodystart="152" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="classzk_app_utils_1_1recovery_strategy_b_i_p39_1ac685ed29676c694fa18da237ed0a6c1e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string zkAppUtils::recoveryStrategyBIP39::getPassPhrase</definition>
+        <argsstring>() const</argsstring>
+        <name>getPassPhrase</name>
+        <reimplements refid="classzk_app_utils_1_1recovery_strategy_base_type_1a16415ed8c4c0f1382cdab19ad02b0b37">getPassPhrase</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="153" column="19" bodyfile="C++/zkAppUtilsClass.h" bodystart="153" bodyend="153"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class used for BIP39 recovery strategy. User can set b64 encoded passphrase and key variant (only &quot;cardano&quot; is supported for ed25519 currently) for bip32 seed generation. It can also hold the mnemonic sentence from master seed generation. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>zkAppUtils::recoveryStrategyBIP39</label>
+        <link refid="classzk_app_utils_1_1recovery_strategy_b_i_p39"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>zkAppUtils::recoveryStrategyBaseType</label>
+        <link refid="classzk_app_utils_1_1recovery_strategy_base_type"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>zkAppUtils::recoveryStrategyBIP39</label>
+        <link refid="classzk_app_utils_1_1recovery_strategy_b_i_p39"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>zkAppUtils::recoveryStrategyBaseType</label>
+        <link refid="classzk_app_utils_1_1recovery_strategy_base_type"/>
+      </node>
+    </collaborationgraph>
+    <location file="C++/zkAppUtilsClass.h" line="138" column="1" bodyfile="C++/zkAppUtilsClass.h" bodystart="139" bodyend="154"/>
+    <listofallmembers>
+      <member refid="classzk_app_utils_1_1recovery_strategy_b_i_p39_1ac685ed29676c694fa18da237ed0a6c1e" prot="public" virt="virtual"><scope>zkAppUtils::recoveryStrategyBIP39</scope><name>getPassPhrase</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_base_type_1a01d29cc209df6b64c98d8e7a18d4e53a" prot="public" virt="non-virtual"><scope>zkAppUtils::recoveryStrategyBIP39</scope><name>getRecoveryStrategy</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_base_type_1a491c7c16800212b22ef5252a517c8745" prot="public" virt="non-virtual"><scope>zkAppUtils::recoveryStrategyBIP39</scope><name>getVariant</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_b_i_p39_1abc4104c4fff42d9638c60798e6a967b3" prot="private" virt="non-virtual"><scope>zkAppUtils::recoveryStrategyBIP39</scope><name>passPhrase</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_base_type_1ab69e4026f5e5cb91f5b87ae1dbbcbbbb" prot="protected" virt="non-virtual"><scope>zkAppUtils::recoveryStrategyBIP39</scope><name>recoveryStrategy</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_base_type_1ad121e69cc920c187d823b223e791004e" prot="public" virt="non-virtual"><scope>zkAppUtils::recoveryStrategyBIP39</scope><name>recoveryStrategyBaseType</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_b_i_p39_1a5aa5fb926bc33091691218aa30c11fba" prot="public" virt="non-virtual"><scope>zkAppUtils::recoveryStrategyBIP39</scope><name>recoveryStrategyBIP39</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_b_i_p39_1ac1c9b9b721be60e9e6bf7567db97322f" prot="public" virt="non-virtual"><scope>zkAppUtils::recoveryStrategyBIP39</scope><name>setPassPhrase</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_base_type_1a226a73e41bdea4be682526934c6bf1d2" prot="public" virt="non-virtual"><scope>zkAppUtils::recoveryStrategyBIP39</scope><name>setVariant</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_base_type_1a64bc26e7ad61c2d645a1acb1f2df5b9f" prot="protected" virt="non-virtual"><scope>zkAppUtils::recoveryStrategyBIP39</scope><name>variant</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_base_type_1a0f53c832b83b15bc484810ed27c3f348" prot="public" virt="non-virtual"><scope>zkAppUtils::recoveryStrategyBIP39</scope><name>~recoveryStrategyBaseType</name></member>
+      <member refid="classzk_app_utils_1_1recovery_strategy_b_i_p39_1a6692050ccaadff2943c0a396e6962be6" prot="public" virt="non-virtual"><scope>zkAppUtils::recoveryStrategyBIP39</scope><name>~recoveryStrategyBIP39</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

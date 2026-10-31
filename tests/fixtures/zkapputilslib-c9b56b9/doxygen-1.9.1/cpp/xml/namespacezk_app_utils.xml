@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacezk_app_utils" kind="namespace" language="C++">
+    <compoundname>zkAppUtils</compoundname>
+    <innerclass refid="classzk_app_utils_1_1common_exception" prot="public">zkAppUtils::commonException</innerclass>
+    <innerclass refid="classzk_app_utils_1_1timeout_exception" prot="public">zkAppUtils::timeoutException</innerclass>
+    <innerclass refid="classzk_app_utils_1_1recovery_strategy_base_type" prot="public">zkAppUtils::recoveryStrategyBaseType</innerclass>
+    <innerclass refid="classzk_app_utils_1_1recovery_strategy_b_i_p39" prot="public">zkAppUtils::recoveryStrategyBIP39</innerclass>
+    <innerclass refid="classzk_app_utils_1_1recovery_strategy_s_l_i_p39" prot="public">zkAppUtils::recoveryStrategySLIP39</innerclass>
+    <innerclass refid="structzk_app_utils_1_1accel_data" prot="public">zkAppUtils::accelData</innerclass>
+    <innerclass refid="classzk_app_utils_1_1zk_class" prot="public">zkAppUtils::zkClass</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="zk_app_utils_class_8h_1a8cb247b41a182478fcdf780c1ce524e3" prot="public" static="no">
+        <type>std::vector&lt; uint8_t &gt;</type>
+        <definition>typedef std::vector&lt;uint8_t&gt; zkAppUtils::byteArray</definition>
+        <argsstring></argsstring>
+        <name>byteArray</name>
+        <briefdescription>
+<para>Typedef for a simple unsigned bytes container. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="202" column="21" bodyfile="C++/zkAppUtilsClass.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="zk_app_utils_class_8h_1a7cc12af0cdc6374a29588629bd450da6" prot="public" static="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>typedef std::vector&lt;int&gt; zkAppUtils::intArray</definition>
+        <argsstring></argsstring>
+        <name>intArray</name>
+        <briefdescription>
+<para>Typedef for a simple integer container. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C++/zkAppUtilsClass.h" line="207" column="21" bodyfile="C++/zkAppUtilsClass.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C++/zkAppUtilsClass.h" line="57" column="1"/>
+  </compounddef>
+</doxygen>
