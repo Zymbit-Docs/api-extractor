@@ -94,7 +94,7 @@ def test_known_content():
     restart = by_name["zkEnableSelfRestart"]
     assert restart["signature"].startswith("int zkEnableSelfRestart(zkCTX ctx")
     assert [p["name"] for p in restart["params"]] == ["ctx", "enabled", "waitSec", "maxNumRestart"]
-    assert restart["returns"]["description"].startswith("0 for success")
+    assert restart["returns"][0]["description"].startswith("0 for success")
 
     # Usage code blocks, which hugoify dropped until this week.
     assert "```\nfind_package(zkAppUtils REQUIRED)" in c["intro"]
