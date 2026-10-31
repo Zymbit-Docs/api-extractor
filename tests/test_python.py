@@ -8,7 +8,7 @@ import pytest
 from api_extractor import python as px
 from api_extractor.common import UnsupportedMarkup
 
-FIXTURE = Path(__file__).parent / "fixtures" / "zkapputilslib-c9b56b9" / "python"
+FIXTURE = Path(__file__).parent / "fixtures" / "zkapputilslib-ec73411" / "python"
 WORD = re.compile(r"[A-Za-z0-9]+")
 
 
@@ -130,5 +130,36 @@ def test_unknown_docstring_section_fails_loudly(tmp_path):
         '__all__ = ["f"]\n'
         'def f(x):\n'
         '    """Do it.\n\n    Yields\n    ------\n    int\n        A number.\n    """\n')
+    with pytest.raises(UnsupportedMarkup):
+        px.Extractor("demo", [tmp_path]).extract()
+
+
+def test_supported_section_becomes_data(page):
+    src = (FIXTURE / "zymkey" / "__init__.py").read_text()
+    tagged = src.count("Supported Devices\n        -----------------")
+    assert tagged == 33
+    with_devices = [i for i in items(page["groups"]) if i["supported"]]
+    assert len(with_devices) == tagged
+    for i in with_devices:
+        assert "Supported Devices" not in i["brief"] + i["details"]
+        assert not [n for n in i["notes"] if n["kind"] == "supported-devices"]
+    by_name = {i["name"]: i for i in items(page["groups"])}
+    assert by_name["ecdh"]["supported"] == ["ZYMKEY5", "HSM60", "HSM64", "HSM6", "Secure Compute Module"]
+    assert by_name["set_supervised_boot_policy"]["supported"] == ["Secure Compute Module"]
+    # Parameter notes are still prose, and still parsed.
+    foreign = next(p for p in by_name["get_slot_alloc_list"]["params"] if p["name"] == "foreign")
+    assert foreign["supported"][0] == "ZYMKEY5"
+
+
+@pytest.mark.parametrize("section", [
+    "Supported Devices\n    -----------------\n    HSM60, HSM7\n",
+    "Supported Devices\n    -----------------\n    HSM6\n\n    Supported Devices\n    -----------------\n    HSM60\n",
+])
+def test_bad_supported_section_fails_loudly(tmp_path, section):
+    pkg = tmp_path / "demo"
+    pkg.mkdir()
+    (pkg / "__init__.py").write_text(
+        '__all__ = ["f"]\n'
+        f'def f(x):\n    """Do it.\n\n    {section}    """\n')
     with pytest.raises(UnsupportedMarkup):
         px.Extractor("demo", [tmp_path]).extract()

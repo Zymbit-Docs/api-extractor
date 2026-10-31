@@ -10,8 +10,8 @@ import re
 
 import griffe
 
-from .common import (SCHEMA_VERSION, UnsupportedMarkup, anchor_for, code_span,
-                     escape_html, supported)
+from .common import (SCHEMA_VERSION, SUPPORTED_TITLE, UnsupportedMarkup, anchor_for,
+                     code_span, devices, escape_html, supported)
 
 INLINE_RE = re.compile(
     r"``(?P<literal>.+?)``"                      # ``literal``
@@ -66,7 +66,7 @@ class Extractor:
         """Fields from an object's docstring: brief, details, params, returns,
         throws, notes, examples."""
         fields = {"brief": "", "details": "", "doc_params": [], "returns": [],
-                  "throws": [], "notes": [], "examples": []}
+                  "throws": [], "notes": [], "examples": [], "supported": None}
         if not obj.docstring:
             return fields
         texts = []
@@ -88,6 +88,12 @@ class Extractor:
                 for r in section.value:
                     fields["throws"].append({"type": _str(r.annotation),
                                              "description": rst_to_md(r.description)})
+            elif kind == "admonition" and section.title == SUPPORTED_TITLE:
+                # Matches the C/C++ @supported tag; napoleon_custom_sections in
+                # zkapputilslib's Sphinx config renders it on the old pages.
+                if fields["supported"] is not None:
+                    raise UnsupportedMarkup(f"two {SUPPORTED_TITLE} sections in {obj.path}")
+                fields["supported"] = devices(" ".join(section.value.description.split()), obj.path)
             elif kind == "admonition":
                 fields["notes"].append({"kind": (section.title or section.value.kind).lower(),
                                         "text": rst_to_md(section.value.description)})
@@ -175,7 +181,7 @@ class Extractor:
             "returns": [],
             "throws": d["throws"],
             "notes": d["notes"],
-            "supported": supported(d["brief"], d["details"]),
+            "supported": d["supported"] or supported(d["brief"], d["details"]),
         }
         if d["examples"]:
             item["examples"] = d["examples"]

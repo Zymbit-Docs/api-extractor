@@ -16,9 +16,9 @@ Python 3.10 or later. The one dependency is griffe, used only for Python pages.
 ```bash
 python -m pip install -e '.[test]'
 api-extractor doxygen path/to/xml --language c --header zk_app_utils.h \
-    --repo zkapputilslib --version 1.2.0-11 --commit c9b56b9 -o c.json
+    --repo zkapputilslib --version 1.2.0-11 --commit ec73411 -o c.json
 api-extractor python zymkey --search-path path/to/zkapputilslib/python \
-    --repo zkapputilslib --version 1.2.0-11 --commit c9b56b9 -o python.json
+    --repo zkapputilslib --version 1.2.0-11 --commit ec73411 -o python.json
 ```
 
 For `doxygen`, the first argument is Doxygen's XML output (the directory holding `index.xml`), and `--header` names the header whose page this is.
@@ -32,7 +32,22 @@ One JSON file per language, with the same shape for all of them so one set of te
 - `intro`, `brief`: the header's file comment or the module docstring, as Markdown.
 - `groups`: one per Doxygen `@{ ... @}` group or section (C, C++), or Classes, Functions and Attributes (Python), each with `items`.
 - Each item has `kind`, `name`, `anchor`, `signature`, `brief`, `details`, `params`, `returns` (a list: Python may document several), `throws`, `notes`, and `supported`. Enums add `values`; structs and classes add their own `groups`.
-- `supported` lists the devices named in an item's own "Supported Devices: ..." text. A parameter's "only applicable for Supported Devices" note goes on that parameter's `supported`, not the item's.
+- `supported` lists the devices an item works on, from its supported-devices tag (below). A parameter's "only applicable for Supported Devices: ..." note is still prose and goes on that parameter's `supported`, not the item's.
+
+## Supported devices
+
+Tag each function or class in the source with the devices it works on. The tag becomes the item's `supported` list, which the site renders as badges, and is left out of the description text.
+
+- **C and C++:** `@supported ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module`, on its own line after `@brief`. It is an alias in zkapputilslib's `docs/Doxyfile` for `@par Supported Devices:`.
+- **Python:** a NumPy-style section, before `Parameters`:
+
+    ```text
+    Supported Devices
+    -----------------
+    ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
+    ```
+
+Device names must be in `DEVICES` in `src/api_extractor/common.py`, so a misspelled name stops the build instead of producing a wrong badge. Two tags on one item are also an error. An item without a tag falls back to a "Supported Devices: ..." phrase in its own text.
 
 Descriptions are Markdown. Prose is escaped, so HTML or Markdown syntax written in a comment renders as literal text.
 

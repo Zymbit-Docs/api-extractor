@@ -10,8 +10,9 @@ import re
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-from .common import (SCHEMA_VERSION, UnsupportedMarkup, anchor_for, code_span,
-                     escape_markdown as _escape, supported as _supported)
+from .common import (SCHEMA_VERSION, SUPPORTED_TITLE, UnsupportedMarkup, anchor_for,
+                     code_span, devices, escape_markdown as _escape,
+                     supported as _supported)
 
 # Section headings for Doxygen's own section kinds. "user-defined" sections are
 # @{ ... @} groups and carry their own heading; private sections are skipped.
@@ -156,8 +157,19 @@ class Converter:
 
     def simplesect(self, e, fields):
         kind = e.get("kind")
+        # A @par section carries a <title> before its paragraphs.
+        title = e.find("title")
+        if title is not None:
+            e = [child for child in e if child.tag != "title"]
         text = "\n\n".join(self.blocks(e, fields))
-        if kind == "return":
+        if kind == "par" and title is not None and _text(title) == SUPPORTED_TITLE + ":":
+            # The @supported alias in zkapputilslib's Doxyfile.
+            if "supported" in fields:
+                raise UnsupportedMarkup(f"two @supported tags ({text!r})")
+            fields["supported"] = devices(" ".join(text.split()), "@supported")
+        elif kind == "par" and title is not None:
+            fields.setdefault("par", []).append(f"**{self.inline(title)}**\n\n{text}")
+        elif kind == "return":
             fields["returns"] = text
         elif kind in NOTE_KINDS:
             fields.setdefault("notes", []).append({"kind": kind, "text": text})
@@ -224,9 +236,9 @@ class Extractor:
             "throws": [{"type": t["name"], "description": t["description"]}
                        for t in fields.pop("throws", [])],
             "notes": fields.pop("notes", []),
-            # The member's own text only: a parameter's "only applicable for
-            # Supported Devices" note belongs to that parameter.
-            "supported": _supported(brief, details),
+            # The @supported tag, else the member's own prose. A parameter's "only
+            # applicable for Supported Devices" note belongs to that parameter.
+            "supported": fields.pop("supported", None) or _supported(brief, details),
         }
         if kind == "function":
             rtype = _text(m.find("type"))
@@ -322,7 +334,7 @@ class Extractor:
             "details": self.description(cdef.find("detaileddescription"), fields),
             "groups": self.sections(cdef),
         }
-        item["supported"] = _supported(item["brief"], item["details"])
+        item["supported"] = fields.pop("supported", None) or _supported(item["brief"], item["details"])
         item["notes"] = fields.pop("notes", [])
         item.update(fields)
         return item
