@@ -10,7 +10,8 @@ import re
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-SCHEMA_VERSION = 1
+from .common import (SCHEMA_VERSION, UnsupportedMarkup, anchor_for, code_span,
+                     escape_markdown as _escape, supported as _supported)
 
 # Section headings for Doxygen's own section kinds. "user-defined" sections are
 # @{ ... @} groups and carry their own heading; private sections are skipped.
@@ -37,27 +38,6 @@ PRIVATE_SECTIONS = {"private-type", "private-func", "private-static-func",
 NOTE_KINDS = {"note", "warning", "attention", "remark"}
 META_KINDS = {"copyright", "version", "author", "date", "since"}
 
-SUPPORTED_RE = re.compile(r"Supported Devices:\s*([^)\n]+?)\s*(?:\)|\.?\s*$)")
-
-
-class UnsupportedMarkup(Exception):
-    """Raised for any Doxygen construct the extractor does not handle."""
-
-
-def _escape(text):
-    """Escape prose so Markdown and HTML in a comment render as literal text."""
-    text = re.sub(r"([\\`*\[\]])", r"\\\1", text)
-    text = text.replace("<", "&lt;").replace(">", "&gt;")
-    # Underscores only emphasize at word boundaries, so leave zk_app_utils alone.
-    return re.sub(r"(?<![A-Za-z0-9])_|_(?![A-Za-z0-9])", r"\\_", text)
-
-
-def _code_span(text):
-    fence = "`" * (max((len(m) for m in re.findall(r"`+", text)), default=0) + 1)
-    pad = " " if text.startswith("`") or text.endswith("`") else ""
-    return f"{fence}{pad}{text}{pad}{fence}"
-
-
 class Converter:
     """Converts Doxygen description markup to Markdown."""
 
@@ -76,7 +56,7 @@ class Converter:
     def inline_elem(self, e):
         tag = e.tag
         if tag == "computeroutput":
-            return _code_span("".join(e.itertext()))
+            return code_span("".join(e.itertext()))
         if tag == "bold":
             return f"**{self.inline(e)}**"
         if tag == "emphasis":
@@ -193,14 +173,6 @@ def _text(elem):
     return " ".join("".join(elem.itertext()).split()) if elem is not None else ""
 
 
-def _supported(*texts):
-    for text in texts:
-        m = SUPPORTED_RE.search(text or "")
-        if m:
-            return [d.strip() for d in m.group(1).split(",") if d.strip()]
-    return []
-
-
 class Extractor:
     def __init__(self, xml_dir):
         self.dir = Path(xml_dir)
@@ -225,11 +197,8 @@ class Extractor:
                 self._anchor(m.get("id"), f"{owner}::{m.findtext('name')}" if owner else m.findtext("name"), used)
 
     def _anchor(self, refid, name, used):
-        if refid in self.anchors:
-            return
-        base = re.sub(r"[^A-Za-z0-9]+", "-", name).strip("-")
-        used[base] = used.get(base, 0) + 1
-        self.anchors[refid] = base if used[base] == 1 else f"{base}-{used[base]}"
+        if refid not in self.anchors:
+            self.anchors[refid] = anchor_for(name, used)
 
     def description(self, elem, fields):
         return "\n\n".join(self.conv.blocks(elem, fields)) if elem is not None else ""
@@ -251,16 +220,17 @@ class Extractor:
             "brief": brief,
             "details": details,
             "params": self.params(m, fields.pop("params", [])),
-            "returns": None,
+            "returns": [],
             "throws": [{"type": t["name"], "description": t["description"]}
                        for t in fields.pop("throws", [])],
             "notes": fields.pop("notes", []),
-            "supported": _supported(_text(m.find("briefdescription")),
-                                    _text(m.find("detaileddescription"))),
+            # The member's own text only: a parameter's "only applicable for
+            # Supported Devices" note belongs to that parameter.
+            "supported": _supported(brief, details),
         }
         if kind == "function":
             rtype = _text(m.find("type"))
-            item["returns"] = {"type": rtype, "description": fields.pop("returns", "")}
+            item["returns"] = [{"type": rtype, "description": fields.pop("returns", "")}]
             for flag in ("static", "const", "virt"):
                 if m.get(flag) not in (None, "no", "non-virtual"):
                     item[flag] = m.get(flag)
@@ -296,6 +266,7 @@ class Extractor:
                 "default": _text(p.find("defval")) or None,
                 "direction": d.get("direction"),
                 "description": d.get("description", ""),
+                "supported": _supported(d.get("description", "")),
             })
         # Documented names that match no declared parameter, or are documented
         # twice: keep them rather than lose the text, and let the page show them.
@@ -303,7 +274,7 @@ class Extractor:
             for d in extra:
                 out.append({"name": name, "type": "", "default": None,
                             "direction": d.get("direction"), "description": d["description"],
-                            "undeclared": True})
+                            "supported": _supported(d["description"]), "undeclared": True})
         return out
 
     def signature(self, m):
@@ -351,6 +322,7 @@ class Extractor:
             "details": self.description(cdef.find("detaileddescription"), fields),
             "groups": self.sections(cdef),
         }
+        item["supported"] = _supported(item["brief"], item["details"])
         item["notes"] = fields.pop("notes", [])
         item.update(fields)
         return item

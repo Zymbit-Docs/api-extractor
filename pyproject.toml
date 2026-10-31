@@ -8,8 +8,8 @@ version = "0.1.0"
 description = "Extracts API reference data from Zymbit library sources as JSON for docs.zymbit.com"
 readme = "README.md"
 license = {text = "MIT"}
-requires-python = ">=3.9"
-dependencies = []
+requires-python = ">=3.10"
+dependencies = ["griffe>=1.15,<2"]
 
 [project.optional-dependencies]
 test = ["pytest"]
