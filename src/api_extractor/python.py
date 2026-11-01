@@ -49,6 +49,14 @@ def _split_brief(text):
     return parts[0].strip(), (parts[1].strip() if len(parts) > 1 else "")
 
 
+# An unfilled type in an IDE-generated docstring template.
+PLACEHOLDER = "TYPE"
+
+
+def _is_any(annotation):
+    return annotation in ("Any", "t.Any", "typing.Any")
+
+
 def _str(expr):
     return str(expr) if expr is not None else ""
 
@@ -132,10 +140,14 @@ class Extractor:
                 "description": d.get("description", ""),
                 "supported": supported(d.get("description", "")),
             }
-            # The code's annotation wins; keep a docstring type that disagrees
-            # (or is a leftover "TYPE" placeholder) so it can be fixed upstream.
+            # The code's annotation wins, unless it is only `Any` and the
+            # docstring names a real type. Keep whichever type lost, including a
+            # leftover "TYPE" placeholder, as doc_type so it can be fixed upstream.
             if d.get("type") and d["type"] != param["type"]:
-                param["doc_type"] = d["type"]
+                if _is_any(param["type"]) and d["type"] != PLACEHOLDER:
+                    param["type"], param["doc_type"] = d["type"], param["type"]
+                else:
+                    param["doc_type"] = d["type"]
             out.append(param)
         for name, extra in docs.items():
             for d in extra:
@@ -198,8 +210,12 @@ class Extractor:
         if not returns and code_type and code_type != "None":
             returns = [{"name": None, "type": code_type, "description": ""}]
         elif len(returns) == 1 and code_type and returns[0]["type"] != code_type:
-            # As for parameters, the annotation wins and the docstring's type is kept.
-            returns[0]["doc_type"], returns[0]["type"] = returns[0]["type"], code_type
+            # As for parameters: the annotation wins unless it is only `Any`.
+            doc = returns[0]["type"]
+            if not (_is_any(code_type) and doc and doc != PLACEHOLDER):
+                returns[0]["doc_type"], returns[0]["type"] = doc, code_type
+            else:
+                returns[0]["doc_type"] = code_type
         item["returns"] = returns
         return item
 

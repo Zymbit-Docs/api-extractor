@@ -163,3 +163,12 @@ def test_bad_supported_section_fails_loudly(tmp_path, section):
         f'def f(x):\n    """Do it.\n\n    {section}    """\n')
     with pytest.raises(UnsupportedMarkup):
         px.Extractor("demo", [tmp_path]).extract()
+
+
+def test_docstring_type_beats_a_bare_any(page):
+    by_name = {i["name"]: i for i in items(page["groups"])}
+    digest = next(p for p in by_name["sign"]["params"] if p["name"] == "digest")
+    assert (digest["type"], digest["doc_type"]) == ("_hashlib.HASH", "t.Any")
+    # A "TYPE" placeholder never beats the code, even an Any.
+    digest = next(p for p in by_name["verify_digest"]["params"] if p["name"] == "digest")
+    assert (digest["type"], digest["doc_type"]) == ("t.Any", "TYPE")

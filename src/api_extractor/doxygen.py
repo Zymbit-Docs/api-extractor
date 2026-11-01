@@ -243,7 +243,7 @@ class Extractor:
         if kind == "function":
             rtype = _text(m.find("type"))
             item["returns"] = [{"type": rtype, "description": fields.pop("returns", "")}]
-            for flag in ("static", "const", "virt"):
+            for flag in ("static", "const", "virt", "inline"):
                 if m.get(flag) not in (None, "no", "non-virtual"):
                     item[flag] = m.get(flag)
         if kind == "enum":
@@ -299,6 +299,9 @@ class Extractor:
         if kind == "enum":
             return f"enum {m.findtext('name')}"
         definition = _text(m.find("definition"))
+        # Doxygen records `inline` as an attribute, not in the definition.
+        if m.get("inline") == "yes" and not definition.startswith("inline "):
+            definition = "inline " + definition
         return definition + (m.findtext("argsstring") or "")
 
     def sections(self, cdef):
