@@ -1,0 +1,218 @@
+name: Publish API docs
+
+# Reusable workflow: extracts a library's API reference with api-extractor and
+# opens (or updates) a pull request in Zymbit-Docs/docs with the JSON. The docs
+# PR's review is the gate; nothing reaches docs.zymbit.com until it is merged.
+#
+# Called from the library repo, pinned to a commit of this repo:
+#
+#   jobs:
+#     docs:
+#       uses: Zymbit-Docs/api-extractor/.github/workflows/publish-docs.yml@<sha> # vX.Y.Z
+#       with:
+#         repo-name: zkapputilslib
+#         ...
+#       secrets:
+#         docs-app-private-key: ${{ secrets.DOCS_APP_PRIVATE_KEY }}
+#
+# See "Publishing from a library repo" in README.md for every input.
+
+on:
+  workflow_call:
+    inputs:
+      repo-name:
+        description: Directory under data/api/ in the docs repo, e.g. zkapputilslib.
+        type: string
+        required: true
+      version:
+        description: Library version shown on the pages. Default is `git describe`; a leading "v" is dropped.
+        type: string
+        default: ""
+      doxyfile:
+        description: The library's Doxyfile, relative to its root. Needed for C and C++.
+        type: string
+        default: ""
+      c-header:
+        type: string
+        default: ""
+      cpp-header:
+        type: string
+        default: ""
+      python-package:
+        type: string
+        default: ""
+      python-path:
+        description: Directory that contains python-package, relative to the library root.
+        type: string
+        default: "."
+      intro:
+        description: Markdown file in the library copied to docs-intro-path.
+        type: string
+        default: ""
+      docs-intro-path:
+        description: Where the intro goes in the docs repo, e.g. content/api/api_docs_intro.md.
+        type: string
+        default: ""
+      extractor-ref:
+        description: Commit of api-extractor to run. Pass the same commit the `uses:` line pins.
+        type: string
+        required: true
+      docs-app-client-id:
+        description: Client ID of the GitHub App that may open PRs in Zymbit-Docs/docs.
+        type: string
+        default: ""
+      dry-run:
+        description: Extract and upload the result as an artifact, but open no PR.
+        type: boolean
+        default: false
+    secrets:
+      docs-app-private-key:
+        description: Private key of that GitHub App. Not needed for a dry run.
+        required: false
+
+permissions: {}
+
+jobs:
+  extract:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - name: Check out the library
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: library
+          fetch-depth: 0  # git describe needs the tags
+          persist-credentials: false
+
+      - name: Check out api-extractor
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: Zymbit-Docs/api-extractor
+          ref: ${{ inputs.extractor-ref }}
+          path: extractor
+          persist-credentials: false
+
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+
+      - name: Install api-extractor and Doxygen
+        env:
+          DOXYFILE: ${{ inputs.doxyfile }}
+        run: |
+          pip install ./extractor
+          if [[ -n "$DOXYFILE" ]]; then
+            sudo apt-get update -q && sudo apt-get install -y -q doxygen
+            doxygen --version
+          fi
+
+      - name: Extract
+        env:
+          REPO_NAME: ${{ inputs.repo-name }}
+          VERSION: ${{ inputs.version }}
+          DOXYFILE: ${{ inputs.doxyfile }}
+          C_HEADER: ${{ inputs.c-header }}
+          CPP_HEADER: ${{ inputs.cpp-header }}
+          PYTHON_PACKAGE: ${{ inputs.python-package }}
+          PYTHON_PATH: ${{ inputs.python-path }}
+          INTRO: ${{ inputs.intro }}
+        run: extractor/scripts/extract-all.sh library out
+
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: api-docs
+          path: out
+          if-no-files-found: error
+
+  publish:
+    needs: extract
+    if: ${{ !inputs.dry-run }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions: {}
+    concurrency:
+      group: publish-api-docs-${{ inputs.repo-name }}
+      cancel-in-progress: false
+    env:
+      BRANCH: api-update/${{ inputs.repo-name }}
+    steps:
+      # A token for Zymbit-Docs/docs only, limited to pushing a branch and
+      # opening a PR. It expires within the hour and is revoked when the job ends.
+      - name: Get a token for the docs repo
+        id: token
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
+        with:
+          client-id: ${{ inputs.docs-app-client-id }}
+          private-key: ${{ secrets.docs-app-private-key }}
+          owner: Zymbit-Docs
+          repositories: docs
+          permission-contents: write
+          permission-pull-requests: write
+
+      - name: Check out the docs repo
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: Zymbit-Docs/docs
+          ref: main
+          path: docs
+          token: ${{ steps.token.outputs.token }}
+
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: api-docs
+          path: out
+
+      - name: Commit to the update branch
+        id: commit
+        env:
+          REPO_NAME: ${{ inputs.repo-name }}
+          INTRO_PATH: ${{ inputs.docs-intro-path }}
+          SOURCE: ${{ github.repository }}@${{ github.sha }}
+        working-directory: docs
+        run: |
+          # Only the extracted pages are replaced. Anything else under
+          # data/api/<repo>/ (legacy_anchors.json) is left alone.
+          mkdir -p data/api/"$REPO_NAME"
+          cp ../out/data/api/"$REPO_NAME"/*.json data/api/"$REPO_NAME"/
+          if [[ -n "$INTRO_PATH" && -f ../out/intro.md ]]; then
+            cp ../out/intro.md "$INTRO_PATH"
+          fi
+          git add -A data/api/"$REPO_NAME" ${INTRO_PATH:+"$INTRO_PATH"}
+          if git diff --cached --quiet; then
+            echo "The docs repo already matches $SOURCE; nothing to publish."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          version=$(python3 -c "import json,sys; print(json.load(open(sys.argv[1]))['source']['version'])" \
+            "$(ls ../out/data/api/"$REPO_NAME"/*.json | head -1)")
+          git -c user.name="zymbit-docs-bot" -c user.email="code@zymbit.com" \
+            commit -q -m "docs(api): update $REPO_NAME to $version" -m "Extracted from $SOURCE by api-extractor."
+          # The branch belongs to this workflow: it is rebuilt from main each run.
+          git push --force origin HEAD:refs/heads/"$BRANCH"
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - name: Open or update the pull request
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ steps.token.outputs.token }}
+          REPO_NAME: ${{ inputs.repo-name }}
+          VERSION: ${{ steps.commit.outputs.version }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          SOURCE_REPO: ${{ github.repository }}
+          SOURCE_SHA: ${{ github.sha }}
+          EXTRACTOR_REF: ${{ inputs.extractor-ref }}
+        working-directory: docs
+        run: |
+          title="API docs: $REPO_NAME $VERSION"
+          body="Regenerated API reference data for \`$REPO_NAME\` $VERSION, from $SOURCE_REPO commit \`$SOURCE_SHA\` by api-extractor \`$EXTRACTOR_REF\`.
+
+          Generated by [this run]($RUN_URL). Review the page changes on staging before merging; merging publishes them to docs.zymbit.com/api/."
+          number=$(gh pr list --repo Zymbit-Docs/docs --head "$BRANCH" --state open --json number --jq '.[0].number')
+          if [[ -n "$number" ]]; then
+            gh api -X PATCH "repos/Zymbit-Docs/docs/pulls/$number" -f title="$title" -f body="$body" --jq .html_url
+          else
+            gh pr create --repo Zymbit-Docs/docs --base main --head "$BRANCH" --title "$title" --body "$body"
+          fi

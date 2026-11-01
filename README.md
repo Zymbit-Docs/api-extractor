@@ -53,6 +53,59 @@ Descriptions are Markdown. Prose is escaped, so HTML or Markdown syntax written 
 
 `anchor` is built from the name (`zkOpen`, `ZK_EC_KEY_TYPE`, `zkAppUtils-zkClass-lockData-2` for an overload, `Zymkey-set_battery_voltage_action` for a method), so it stays the same across releases and Doxygen versions.
 
+## Publishing from a library repo
+
+`.github/workflows/publish-docs.yml` is a reusable workflow. A library calls it on a release tag; it extracts the library's API reference with `scripts/extract-all.sh` and opens a pull request in Zymbit-Docs/docs that updates `data/api/<repo-name>/`. Nothing changes on docs.zymbit.com until someone reviews and merges that PR.
+
+zkapputilslib's `.github/workflows/publish-docs.yml` is the working example. The call looks like this:
+
+```yaml
+jobs:
+  docs:
+    uses: Zymbit-Docs/api-extractor/.github/workflows/publish-docs.yml@<commit sha> # vX.Y.Z
+    permissions:
+      contents: read
+    with:
+      repo-name: zkapputilslib
+      doxyfile: docs/Doxyfile
+      c-header: zk_app_utils.h
+      cpp-header: C++/zkAppUtilsClass.h
+      python-package: zymkey
+      python-path: python
+      intro: mainpage.md
+      docs-intro-path: content/api/api_docs_intro.md
+      extractor-ref: <the same commit sha>
+      docs-app-client-id: ${{ vars.DOCS_APP_CLIENT_ID }}
+    secrets:
+      docs-app-private-key: ${{ secrets.DOCS_APP_PRIVATE_KEY }}
+```
+
+| Input | Meaning |
+| --- | --- |
+| `repo-name` | Directory under `data/api/` in the docs repo. Required. |
+| `version` | Version shown on the pages. Default: `git describe --tags`, without a leading `v`. |
+| `doxyfile` | The library's Doxyfile, used as-is except for what it reads and writes. Needed for C and C++. |
+| `c-header`, `cpp-header` | The header for each page; leave one out to skip that page. |
+| `python-package`, `python-path` | The Python package and the directory that contains it. |
+| `intro`, `docs-intro-path` | A Markdown file copied into the docs repo as the API intro page. |
+| `extractor-ref` | The api-extractor commit to run. Pass the commit the `uses:` line pins, so the workflow and the extractor always match. Required. |
+| `docs-app-client-id`, secret `docs-app-private-key` | The GitHub App that may push a branch and open a PR in Zymbit-Docs/docs (below). |
+| `dry-run` | Extract and upload the JSON as a run artifact, with no PR. Needs no App. |
+
+**Pin by commit SHA,** not by a branch or tag, in both `uses:` and `extractor-ref`. A tag can be moved; a SHA cannot. To upgrade, change both to the new release's commit.
+
+**Credentials.** The workflow gets a token from a GitHub App installed only on Zymbit-Docs/docs, with *Contents: write* and *Pull requests: write*. The token is limited to that repo, lasts at most an hour, and is revoked when the job ends. The calling repo stores the App's client ID as the variable `DOCS_APP_CLIENT_ID` and its private key as the secret `DOCS_APP_PRIVATE_KEY`. No personal token or deploy key is involved.
+
+**What the PR contains.** The workflow rebuilds the branch `api-update/<repo-name>` from the docs repo's `main` on every run, so it only ever holds one commit: the new JSON files (and intro page). Other files in `data/api/<repo-name>/`, such as `legacy_anchors.json`, are left alone. If nothing changed, it opens no PR.
+
+To run the extraction locally, with the same script:
+
+```bash
+REPO_NAME=zkapputilslib DOXYFILE=docs/Doxyfile C_HEADER=zk_app_utils.h \
+CPP_HEADER=C++/zkAppUtilsClass.h PYTHON_PACKAGE=zymkey PYTHON_PATH=python INTRO=mainpage.md \
+    scripts/extract-all.sh ../zkapputilslib /tmp/api-docs
+```
+
 ## Strictness
 
 A Doxygen element, section, or member kind, or a docstring section, that the extractor does not recognize stops it with an error rather than being skipped. Add support for it in `src/api_extractor/doxygen.py` or `python.py`, with a test, when one appears.
