@@ -7,7 +7,7 @@ Extracts API reference data from Zymbit library sources and writes it as JSON fo
 
 Libraries call this repo's reusable workflow on a release to open a pull request against [Zymbit-Docs/docs](https://github.com/Zymbit-Docs/docs). zkapputilslib is the first; others, such as zkpkcs11, can adopt it the same way.
 
-This replaces the Sphinx, Breathe, and [hugoify](https://github.com/Zymbit-Docs/actions-hugoify-api-docs) pipeline. Work in progress; nothing here is used by the live site yet. Status: the C/C++ and Python extractors are done; the reusable workflow is next.
+Since November 2026 this is how docs.zymbit.com/api/ is built, replacing the Sphinx, Breathe, and [hugoify](https://github.com/Zymbit-Docs/actions-hugoify-api-docs) pipeline. How the docs repo renders and reviews the result is in its README, under "API reference".
 
 ## Usage
 
