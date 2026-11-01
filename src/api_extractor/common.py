@@ -57,6 +57,6 @@ def supported(*texts):
 
 def anchor_for(name, used):
     """A readable anchor from a name; overloads get -2, -3, ..."""
-    base = re.sub(r"[^A-Za-z0-9]+", "-", name).strip("-")
+    base = re.sub(r"[^A-Za-z0-9_]+", "-", name).strip("-")
     used[base] = used.get(base, 0) + 1
     return base if used[base] == 1 else f"{base}-{used[base]}"

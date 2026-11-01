@@ -51,7 +51,7 @@ Device names must be in `DEVICES` in `src/api_extractor/common.py`, so a misspel
 
 Descriptions are Markdown. Prose is escaped, so HTML or Markdown syntax written in a comment renders as literal text.
 
-`anchor` is built from the name (`zkOpen`, `zkAppUtils-zkClass-lockData-2` for an overload), so it stays the same across releases and Doxygen versions.
+`anchor` is built from the name (`zkOpen`, `ZK_EC_KEY_TYPE`, `zkAppUtils-zkClass-lockData-2` for an overload, `Zymkey-set_battery_voltage_action` for a method), so it stays the same across releases and Doxygen versions.
 
 ## Strictness
 

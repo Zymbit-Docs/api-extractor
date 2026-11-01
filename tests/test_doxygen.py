@@ -175,7 +175,7 @@ def test_anchors_are_unique_and_readable():
     cpp = extract("doxygen-1.9.8", "cpp", "zkAppUtilsClass.h")
     anchors = [i["anchor"] for i in items(cpp["groups"])]
     assert len(anchors) == len(set(anchors))
-    assert all(re.fullmatch(r"[A-Za-z0-9-]+", a) for a in anchors)
+    assert all(re.fullmatch(r"[A-Za-z0-9_-]+", a) for a in anchors)
 
 
 def test_unknown_markup_fails_loudly():
