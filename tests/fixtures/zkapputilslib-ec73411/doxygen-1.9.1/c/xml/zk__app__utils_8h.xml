@@ -1266,10 +1266,12 @@
           <declname>pre_master_secret</declname>
         </param>
         <briefdescription>
-<para>Perform a raw ECDH operation. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Perform a raw ECDH operation. </para>
         </briefdescription>
         <detaileddescription>
-<para>Perform an ECDH operation with no Key Derivation Function (KDF). The raw pre-master secret is returned in the response. The peer public key is presented in the call. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+Perform an ECDH operation with no Key Derivation Function (KDF). The raw pre-master secret is returned in the response. The peer public key is presented in the call. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
 </parameternamelist>
@@ -1316,7 +1318,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="608" column="5" declfile="zk_app_utils.h" declline="608" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="609" column="5" declfile="zk_app_utils.h" declline="609" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1ac1222347f2bd12f688db3a5bbbb83f97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1344,10 +1346,12 @@
           <declname>pre_master_secret</declname>
         </param>
         <briefdescription>
-<para>Perform a raw ECDH operation. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Perform a raw ECDH operation. </para>
         </briefdescription>
         <detaileddescription>
-<para>Perform an ECDH operation with no Key Derivation Function (KDF). The raw pre-master secret is returned in the response. The peer public key is referenced from the zymkey internal key store. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+Perform an ECDH operation with no Key Derivation Function (KDF). The raw pre-master secret is returned in the response. The peer public key is referenced from the zymkey internal key store. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
 </parameternamelist>
@@ -1394,7 +1398,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="635" column="5" declfile="zk_app_utils.h" declline="635" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="637" column="5" declfile="zk_app_utils.h" declline="637" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a772ea57e2db2aeab6d3e30e32c1af3b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1450,10 +1454,12 @@
           <declname>derived_key</declname>
         </param>
         <briefdescription>
-<para>Perform an ECDH operation plus Key Derivation Function. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Perform an ECDH operation plus Key Derivation Function. </para>
         </briefdescription>
         <detaileddescription>
-<para>Perform an ECDH operation with Key Derivation Function (KDF). The derived key is returned in the response. The peer public key is presented in the call. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+Perform an ECDH operation with Key Derivation Function (KDF). The derived key is returned in the response. The peer public key is presented in the call. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
 </parameternamelist>
@@ -1548,7 +1554,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="675" column="5" declfile="zk_app_utils.h" declline="675" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="678" column="5" declfile="zk_app_utils.h" declline="678" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a38ce470571919d1fc26e877b4c1edc16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1604,10 +1610,12 @@
           <declname>derived_key</declname>
         </param>
         <briefdescription>
-<para>Perform an ECDH operation plus Key Derivation Function. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Perform an ECDH operation plus Key Derivation Function. </para>
         </briefdescription>
         <detaileddescription>
-<para>Perform an ECDH operation with Key Derivation Function (KDF). The derived key is returned in the response. The peer public key is referenced from the zymkey internal key store. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+Perform an ECDH operation with Key Derivation Function (KDF). The derived key is returned in the response. The peer public key is referenced from the zymkey internal key store. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
 </parameternamelist>
@@ -1702,7 +1710,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="724" column="5" declfile="zk_app_utils.h" declline="724" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="728" column="5" declfile="zk_app_utils.h" declline="728" declcolumn="5"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -1759,7 +1767,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="755" column="5" declfile="zk_app_utils.h" declline="755" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="759" column="5" declfile="zk_app_utils.h" declline="759" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a6446ab63ac57d94a77e5c6373ee24399" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1825,7 +1833,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="774" column="5" declfile="zk_app_utils.h" declline="774" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="778" column="5" declfile="zk_app_utils.h" declline="778" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a2c71f05a6b2b14d0440b9d3c81b41bfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1891,7 +1899,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="795" column="5" declfile="zk_app_utils.h" declline="795" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="799" column="5" declfile="zk_app_utils.h" declline="799" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a8f43ab1e3cfd0429a33f6e1292dced00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1969,7 +1977,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="818" column="5" declfile="zk_app_utils.h" declline="818" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="822" column="5" declfile="zk_app_utils.h" declline="822" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1ac4f620af7fafbf32fd820f6db8861e5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1997,10 +2005,12 @@
           <declname>alloc_key_list_sz</declname>
         </param>
         <briefdescription>
-<para>Get the list of allocated keys (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module). </para>
+<para>Get the list of allocated keys. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function returns a list of all allocated key slots. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function returns a list of all allocated key slots. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
 </parameternamelist>
@@ -2047,7 +2057,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="842" column="5" declfile="zk_app_utils.h" declline="842" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="847" column="5" declfile="zk_app_utils.h" declline="847" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a558efd96315d7e1e7245e52cdfa0bd0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2071,10 +2081,12 @@
           <declname>pk_sz</declname>
         </param>
         <briefdescription>
-<para>Store a new foreign public key in Zymkey. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Store a new foreign public key in Zymkey. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function stores a new foreign public key in the Zymkey public key ring. This public key can be used for signature verification in use cases where it is desirable to hide the public key. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function stores a new foreign public key in the Zymkey public key ring. This public key can be used for signature verification in use cases where it is desirable to hide the public key. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
 </parameternamelist>
@@ -2113,7 +2125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="865" column="5" declfile="zk_app_utils.h" declline="865" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="871" column="5" declfile="zk_app_utils.h" declline="871" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a156c256f416f2e5b466fe7379d64899b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2133,10 +2145,12 @@
           <declname>slot_is_foreign</declname>
         </param>
         <briefdescription>
-<para>Prevent a public key from being exported to the host. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Prevent a public key from being exported to the host. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function prevents the public key at the specified slot from being exported to the host using the API zkExportPubKey. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function prevents the public key at the specified slot from being exported to the host using the API zkExportPubKey. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
 </parameternamelist>
@@ -2167,7 +2181,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="883" column="5" declfile="zk_app_utils.h" declline="883" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="890" column="5" declfile="zk_app_utils.h" declline="890" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a7d440c70c23f8fe1144a4a95b2ada1e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2183,10 +2197,12 @@
           <declname>type</declname>
         </param>
         <briefdescription>
-<para>Generate a new persistent key pair. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Generate a new persistent key pair. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function generates a new key pair of the specified type and store it persistently. This key pair cannot be used as part of the zymkey&apos;s digital wallet operations. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function generates a new key pair of the specified type and store it persistently. This key pair cannot be used as part of the zymkey&apos;s digital wallet operations. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
 </parameternamelist>
@@ -2209,7 +2225,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="899" column="5" declfile="zk_app_utils.h" declline="899" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="907" column="5" declfile="zk_app_utils.h" declline="907" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1ab97b544f292dae99810a4d2128a0ba53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2225,10 +2241,12 @@
           <declname>type</declname>
         </param>
         <briefdescription>
-<para>Generate an ephemeral key pair. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Generate an ephemeral key pair. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function generates an ephemeral key pair of the specified type. Ephemeral key pairs are useful when performing ECDH for time-of-flight encryption. Only one ephemeral key slot is available and is not persistent between reboots. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function generates an ephemeral key pair of the specified type. Ephemeral key pairs are useful when performing ECDH for time-of-flight encryption. Only one ephemeral key slot is available and is not persistent between reboots. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
 </parameternamelist>
@@ -2251,7 +2269,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="915" column="5" declfile="zk_app_utils.h" declline="915" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="924" column="5" declfile="zk_app_utils.h" declline="924" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a68c45329be1247878b4d0d9a690e2915" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2271,10 +2289,12 @@
           <declname>slot_is_foreign</declname>
         </param>
         <briefdescription>
-<para>Remove a key pair or a foreign public key. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Remove a key pair or a foreign public key. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function deletes a key pair or a foreign public key from persistent storage. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function deletes a key pair or a foreign public key from persistent storage. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
 </parameternamelist>
@@ -2305,7 +2325,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="931" column="5" declfile="zk_app_utils.h" declline="931" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="941" column="5" declfile="zk_app_utils.h" declline="941" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a6d74d4a5fd5748dd90c30c372bf23e2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2317,10 +2337,12 @@
           <declname>ctx</declname>
         </param>
         <briefdescription>
-<para>Invalidate the ephemeral key. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Invalidate the ephemeral key. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function invalidates the ephemeral key. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function invalidates the ephemeral key. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
 </parameternamelist>
@@ -2335,7 +2357,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="943" column="5" declfile="zk_app_utils.h" declline="943" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="954" column="5" declfile="zk_app_utils.h" declline="954" declcolumn="5"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -2378,10 +2400,12 @@
           <declname>mnemonic</declname>
         </param>
         <briefdescription>
-<para>Generate master seed to start a new blockchain wallet. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Generate master seed to start a new blockchain wallet. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function generates a new blockchain master seed for creating a new wallet. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function generates a new blockchain master seed for creating a new wallet. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
 </parameternamelist>
@@ -2452,7 +2476,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="981" column="5" declfile="zk_app_utils.h" declline="981" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="993" column="5" declfile="zk_app_utils.h" declline="993" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a3861037651637a8eab415d87afb79573" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2500,10 +2524,12 @@
           <declname>master_passphrase</declname>
         </param>
         <briefdescription>
-<para>Generate master seed to start a new blockchain wallet. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Generate master seed to start a new blockchain wallet. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function opens a session to generate a new blockchain master seed with the ability to recover from SLIP39 shards. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function opens a session to generate a new blockchain master seed with the ability to recover from SLIP39 shards. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
 </parameternamelist>
@@ -2590,7 +2616,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1020" column="5" declfile="zk_app_utils.h" declline="1020" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1033" column="5" declfile="zk_app_utils.h" declline="1033" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1ab4c8679b71f8995cc45393a88b1eee7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2614,10 +2640,12 @@
           <declname>member_threshold</declname>
         </param>
         <briefdescription>
-<para>Set the active SLIP39 group and the amount of members needed. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Set the active SLIP39 group and the amount of members needed. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function configures the active group to generate the number of shards requested for the active group. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function configures the active group to generate the number of shards requested for the active group. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
 </parameternamelist>
@@ -2656,7 +2684,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1046" column="5" declfile="zk_app_utils.h" declline="1046" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1060" column="5" declfile="zk_app_utils.h" declline="1060" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a74e3498e7e50bddd8c943a6fae057293" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2676,10 +2704,12 @@
           <declname>mnemonic_sentence</declname>
         </param>
         <briefdescription>
-<para>Generate a new SLIP39 member shard. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Generate a new SLIP39 member shard. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function generates a new SLIP39 member shard. The shard can optionally have a password attached to it. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function generates a new SLIP39 member shard. The shard can optionally have a password attached to it. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
 </parameternamelist>
@@ -2710,7 +2740,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1064" column="5" declfile="zk_app_utils.h" declline="1064" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1079" column="5" declfile="zk_app_utils.h" declline="1079" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a2ae5543e5250d7434f0cc4f9086b85b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2722,10 +2752,12 @@
           <declname>ctx</declname>
         </param>
         <briefdescription>
-<para>Cancels the current active SLIP39 session (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Cancels the current active SLIP39 session. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function cancels open active SLIP39 sessions. For both generation and restore SLIP39 sessions. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function cancels open active SLIP39 sessions. For both generation and restore SLIP39 sessions. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
 </parameternamelist>
@@ -2740,7 +2772,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1077" column="5" declfile="zk_app_utils.h" declline="1077" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1093" column="5" declfile="zk_app_utils.h" declline="1093" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a18da27cf2ed94be41ecc357b8289e074" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2776,10 +2808,12 @@
           <declname>wallet_name</declname>
         </param>
         <briefdescription>
-<para>Generate master seed to start a new blockchain wallet. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Generate master seed to start a new blockchain wallet. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function generates a new blockchain master seed for creating a new wallet. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function generates a new blockchain master seed for creating a new wallet. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
 </parameternamelist>
@@ -2834,7 +2868,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1099" column="5" declfile="zk_app_utils.h" declline="1099" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1116" column="5" declfile="zk_app_utils.h" declline="1116" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a4d052b8491006e91425266cdb090aad9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2866,10 +2900,12 @@
           <declname>chain_code</declname>
         </param>
         <briefdescription>
-<para>Generate child key from a parent key in a blockchain wallet . (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Generate child key from a parent key in a blockchain wallet. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function generates a new child key descendent from a specified parent key in a wallet. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function generates a new child key descendent from a specified parent key in a wallet. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
 </parameternamelist>
@@ -2924,7 +2960,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1129" column="5" declfile="zk_app_utils.h" declline="1129" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1146" column="5" declfile="zk_app_utils.h" declline="1146" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a2aab50f875d6e82ff9ea10ab32d9d6ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2964,10 +3000,12 @@
           <declname>BIP39_mnemonic</declname>
         </param>
         <briefdescription>
-<para>Restore a master seed from a BIP39 mnemonic and a master generator key. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Restore a master seed from a BIP39 mnemonic and a master generator key. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function restores a wallet master seed from a supplied BIP39 mnemonic string and a master generator key. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function restores a wallet master seed from a supplied BIP39 mnemonic string and a master generator key. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
 </parameternamelist>
@@ -3038,7 +3076,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1164" column="5" declfile="zk_app_utils.h" declline="1164" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1182" column="5" declfile="zk_app_utils.h" declline="1182" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1abad0202fb44e0e09b6ca36fcca72e02c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3074,10 +3112,12 @@
           <declname>SLIP39_passphrase</declname>
         </param>
         <briefdescription>
-<para>Open a SLIP39 restore master seed session (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module). </para>
+<para>Open a SLIP39 restore master seed session. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function starts a restore SLIP39 session, in order to start feeding shards into. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function starts a restore SLIP39 session, in order to start feeding shards into. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
 </parameternamelist>
@@ -3140,7 +3180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1197" column="5" declfile="zk_app_utils.h" declline="1197" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1216" column="5" declfile="zk_app_utils.h" declline="1216" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a47f5e75a54b769afe947868aa2a3c5e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3160,10 +3200,12 @@
           <declname>mnemonic_sentence</declname>
         </param>
         <briefdescription>
-<para>Feed a SLIP39 shard to restore a master seed (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module). </para>
+<para>Feed a SLIP39 shard to restore a master seed. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function will feed a shard to the module until the conditions are met and a master seed is generated. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function will feed a shard to the module until the conditions are met and a master seed is generated. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
 </parameternamelist>
@@ -3194,7 +3236,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1218" column="5" declfile="zk_app_utils.h" declline="1218" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1238" column="5" declfile="zk_app_utils.h" declline="1238" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a5d6c1880618a06e360fad5f3b6b554a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3222,10 +3264,12 @@
           <declname>master_seed_slot</declname>
         </param>
         <briefdescription>
-<para>Derive the node address from a key slot number. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Derive the node address from a key slot number. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function derives a node address from an input key slot number. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function derives a node address from an input key slot number. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
 </parameternamelist>
@@ -3272,7 +3316,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1241" column="5" declfile="zk_app_utils.h" declline="1241" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1262" column="5" declfile="zk_app_utils.h" declline="1262" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1ab8d71adf4a175f319cc56ce83fc745d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3300,10 +3344,12 @@
           <declname>slot</declname>
         </param>
         <briefdescription>
-<para>Derive the slot address from a node address. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Derive the slot address from a node address. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function returns the slot number associated with a given node address. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function returns the slot number associated with a given node address. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
 </parameternamelist>
@@ -3350,7 +3396,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1269" column="5" declfile="zk_app_utils.h" declline="1269" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1291" column="5" declfile="zk_app_utils.h" declline="1291" declcolumn="5"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -3407,7 +3453,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1295" column="5" declfile="zk_app_utils.h" declline="1295" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1317" column="5" declfile="zk_app_utils.h" declline="1317" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1af3e8e23e3a8cdbf5ec95f115fb154915" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3423,10 +3469,12 @@
           <declname>lp_period</declname>
         </param>
         <briefdescription>
-<para>Set the low power period (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module). </para>
+<para>Set the low power period. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function sets low power period on the digital perimeter detect <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function sets low power period on the digital perimeter detect <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
 </parameternamelist>
@@ -3449,7 +3497,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1307" column="5" declfile="zk_app_utils.h" declline="1307" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1330" column="5" declfile="zk_app_utils.h" declline="1330" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a6e29752c07d3f08810b1ef78162e00d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3465,10 +3513,12 @@
           <declname>max_num_bits</declname>
         </param>
         <briefdescription>
-<para>Set the low power max number of bits (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module). </para>
+<para>Set the low power max number of bits. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function sets low power max number of bits on the digital perimeter detect <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function sets low power max number of bits on the digital perimeter detect <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
 </parameternamelist>
@@ -3491,7 +3541,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1320" column="5" declfile="zk_app_utils.h" declline="1320" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1344" column="5" declfile="zk_app_utils.h" declline="1344" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a32d0c0a1960f271c4c37b173fd6f6fde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3511,10 +3561,12 @@
           <declname>max_delay_ns</declname>
         </param>
         <briefdescription>
-<para>Set the delays (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module). </para>
+<para>Set the delays. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function sets delays on the digital perimeter detect <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function sets delays on the digital perimeter detect <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
 </parameternamelist>
@@ -3545,7 +3597,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1335" column="5" declfile="zk_app_utils.h" declline="1335" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1360" column="5" declfile="zk_app_utils.h" declline="1360" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a8ee9b92164a922565327aae70ea12578" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3579,7 +3631,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1353" column="5" declfile="zk_app_utils.h" declline="1353" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1378" column="5" declfile="zk_app_utils.h" declline="1378" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1ac21dfdb0c57067772fe45c6481551029" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3625,7 +3677,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1369" column="5" declfile="zk_app_utils.h" declline="1369" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1394" column="5" declfile="zk_app_utils.h" declline="1394" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1aaba47000d3349d6278c4e0389f3be92d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3646,7 +3698,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1378" column="5" declfile="zk_app_utils.h" declline="1378" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1403" column="5" declfile="zk_app_utils.h" declline="1403" declcolumn="5"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -3679,7 +3731,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1392" column="5" declfile="zk_app_utils.h" declline="1392" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1417" column="5" declfile="zk_app_utils.h" declline="1417" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a95b9136c02dd481c3c5da5835e47dc4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3709,7 +3761,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1401" column="5" declfile="zk_app_utils.h" declline="1401" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1426" column="5" declfile="zk_app_utils.h" declline="1426" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a83ef549eec6c821909be6a542995ebca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3775,7 +3827,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1419" column="5" declfile="zk_app_utils.h" declline="1419" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1444" column="5" declfile="zk_app_utils.h" declline="1444" declcolumn="5"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -3812,7 +3864,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1443" column="5" declfile="zk_app_utils.h" declline="1443" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1468" column="5" declfile="zk_app_utils.h" declline="1468" declcolumn="5"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -3861,7 +3913,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1462" column="5" declfile="zk_app_utils.h" declline="1462" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1487" column="5" declfile="zk_app_utils.h" declline="1487" declcolumn="5"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -3914,7 +3966,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1485" column="5" declfile="zk_app_utils.h" declline="1485" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1510" column="5" declfile="zk_app_utils.h" declline="1510" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a59be1e5f44001cfe4dbaac2a77bbab4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3948,7 +4000,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1499" column="5" declfile="zk_app_utils.h" declline="1499" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1524" column="5" declfile="zk_app_utils.h" declline="1524" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1aafb16259abbab1dc1a65c0efa54d5a42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3990,7 +4042,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1514" column="5" declfile="zk_app_utils.h" declline="1514" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1539" column="5" declfile="zk_app_utils.h" declline="1539" declcolumn="5"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -4014,7 +4066,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1528" column="5" declfile="zk_app_utils.h" declline="1528" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1553" column="5" declfile="zk_app_utils.h" declline="1553" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a9c1ac0054642eb48f4d9b604e1fb0ab5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4052,7 +4104,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1542" column="5" declfile="zk_app_utils.h" declline="1542" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1567" column="5" declfile="zk_app_utils.h" declline="1567" declcolumn="5"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -4097,7 +4149,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1560" column="5" declfile="zk_app_utils.h" declline="1560" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1585" column="5" declfile="zk_app_utils.h" declline="1585" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a277fddb2c0abff8b8b2e532b46481fe5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4139,7 +4191,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1575" column="5" declfile="zk_app_utils.h" declline="1575" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1600" column="5" declfile="zk_app_utils.h" declline="1600" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a2de34f6c567cf67e908d6aafce53b323" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4181,7 +4233,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1590" column="5" declfile="zk_app_utils.h" declline="1590" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1615" column="5" declfile="zk_app_utils.h" declline="1615" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a2e463f92b62c58b0ffb3d036998de8cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4197,10 +4249,12 @@
           <declname>cpu_temp</declname>
         </param>
         <briefdescription>
-<para>Get current HSM CPU temperature. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Get current HSM CPU temperature. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function gets the current HSM CPU temp. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function gets the current HSM CPU temp. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>cpu_temp</parametername>
 </parameternamelist>
@@ -4215,7 +4269,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1600" column="5" declfile="zk_app_utils.h" declline="1600" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1626" column="5" declfile="zk_app_utils.h" declline="1626" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1ad671aab27fb8e99f384f93675a53e304" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4269,7 +4323,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1614" column="5" declfile="zk_app_utils.h" declline="1614" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1640" column="5" declfile="zk_app_utils.h" declline="1640" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a4fb1581bda04b621f56af043173159f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4285,10 +4339,12 @@
           <declname>rtc_drift</declname>
         </param>
         <briefdescription>
-<para>Get current RTC drift. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Get current RTC drift. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function is called to get the current RTC drift. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function is called to get the current RTC drift. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>rtc_drift</parametername>
 </parameternamelist>
@@ -4303,7 +4359,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1624" column="5" declfile="zk_app_utils.h" declline="1624" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1651" column="5" declfile="zk_app_utils.h" declline="1651" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a9c2d7b0c22146f89ba04ccc7df38052b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4319,10 +4375,12 @@
           <declname>batt_voltage</declname>
         </param>
         <briefdescription>
-<para>Get the battery voltage (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module). </para>
+<para>Get the battery voltage. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function gets the current battery voltage <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function gets the current battery voltage <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
 </parameternamelist>
@@ -4345,7 +4403,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1636" column="5" declfile="zk_app_utils.h" declline="1636" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1664" column="5" declfile="zk_app_utils.h" declline="1664" declcolumn="5"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -4364,10 +4422,12 @@
           <declname>action</declname>
         </param>
         <briefdescription>
-<para>Set battery voltage threshold action. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Set battery voltage threshold action. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function specifies the action to take when the battery voltage falls below the threshold set by zkSetBatteryVoltageThreshold. If this function is never called, do nothing is default. There are three actions:<itemizedlist>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function specifies the action to take when the battery voltage falls below the threshold set by zkSetBatteryVoltageThreshold. If this function is never called, do nothing is default. There are three actions:<itemizedlist>
 <listitem><para>Do nothing</para>
 </listitem><listitem><para>Go to sleep until battery is replaced</para>
 </listitem><listitem><para>Self-destruct <parameterlist kind="param"><parameteritem>
@@ -4392,7 +4452,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1664" column="5" declfile="zk_app_utils.h" declline="1664" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1693" column="5" declfile="zk_app_utils.h" declline="1693" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a85d7e20bba98c94d2bd92b1f8dfc68c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4408,10 +4468,12 @@
           <declname>threshold</declname>
         </param>
         <briefdescription>
-<para>Sets the battery voltage threshold. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Sets the battery voltage threshold. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function sets the threshold at which if the battery voltage falls bellow, the action set by zkSetBatteryVoltageAction will be carried out. The recommended threshold is 2.3V. If this function isn&apos;t called 2.3V is assumed by default. Threshold must be below 2.5V. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function sets the threshold at which if the battery voltage falls bellow, the action set by zkSetBatteryVoltageAction will be carried out. The recommended threshold is 2.3V. If this function isn&apos;t called 2.3V is assumed by default. Threshold must be below 2.5V. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>threshold</parametername>
 </parameternamelist>
@@ -4426,7 +4488,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1679" column="5" declfile="zk_app_utils.h" declline="1679" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1709" column="5" declfile="zk_app_utils.h" declline="1709" declcolumn="5"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -4445,10 +4507,12 @@
           <declname>action</declname>
         </param>
         <briefdescription>
-<para>Set HSM CPU temperature threshold action. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Set HSM CPU temperature threshold action. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function specifies the action to take when the HSM CPU temperature falls below the threshold set by zkSetCPULowTempThreshold, or rises above the threshold set by zkSetCPUHighTempThreshold. There are two actions to apply:<itemizedlist>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function specifies the action to take when the HSM CPU temperature falls below the threshold set by zkSetCPULowTempThreshold, or rises above the threshold set by zkSetCPUHighTempThreshold. There are two actions to apply:<itemizedlist>
 <listitem><para>Do nothing</para>
 </listitem><listitem><para>Self-destruct <parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -4471,7 +4535,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1703" column="5" declfile="zk_app_utils.h" declline="1703" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1734" column="5" declfile="zk_app_utils.h" declline="1734" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a0bf795c9bed846f2d87855816e70c114" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4487,10 +4551,12 @@
           <declname>threshold</declname>
         </param>
         <briefdescription>
-<para>Sets the HSM CPU low temperature threshold. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Sets the HSM CPU low temperature threshold. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function sets the threshold at which if the on-board HSM CPU&apos;s tempreature falls below, the action set by zkSetCPUTempAction will be carried out. WARNING: You can lock yourself out in dev mode if you set a threshold above the CPU&apos;s ambient temperature. The recommended setting is no more than 20C. If no threshold is set, -10 degrees celsius is set as default. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function sets the threshold at which if the on-board HSM CPU&apos;s tempreature falls below, the action set by zkSetCPUTempAction will be carried out. WARNING: You can lock yourself out in dev mode if you set a threshold above the CPU&apos;s ambient temperature. The recommended setting is no more than 20C. If no threshold is set, -10 degrees celsius is set as default. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>threshold</parametername>
 </parameternamelist>
@@ -4505,7 +4571,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1721" column="5" declfile="zk_app_utils.h" declline="1721" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1753" column="5" declfile="zk_app_utils.h" declline="1753" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a26fab5ddba18b8d79feebcebe8583e1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4521,10 +4587,12 @@
           <declname>threshold</declname>
         </param>
         <briefdescription>
-<para>Sets the HSM CPU high temperature threshold. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Sets the HSM CPU high temperature threshold. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function sets the threshold at which if the on-board HSM CPU&apos;s tempreature rises above, the action set by zkSetCPUTempAction will be carried out. WARNING: You can lock yourself out in dev mode if you set a threshold below the CPU&apos;s ambient temperature. The recommended setting is no less than 40C. If no threshold is set, 65 degrees celsius is set as default. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function sets the threshold at which if the on-board HSM CPU&apos;s tempreature rises above, the action set by zkSetCPUTempAction will be carried out. WARNING: You can lock yourself out in dev mode if you set a threshold below the CPU&apos;s ambient temperature. The recommended setting is no less than 40C. If no threshold is set, 65 degrees celsius is set as default. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>threshold</parametername>
 </parameternamelist>
@@ -4539,7 +4607,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1738" column="5" declfile="zk_app_utils.h" declline="1738" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1771" column="5" declfile="zk_app_utils.h" declline="1771" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a321d93da694eabc9b86469131d2d8ee7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4555,10 +4623,12 @@
           <declname>policy_id</declname>
         </param>
         <briefdescription>
-<para>Sets the Supervised boot policy. (Supported Devices: Secure Compute Module) </para>
+<para>Sets the Supervised boot policy. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function specifies the action to take when Supervised boot event triggers based on a file change. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>Secure Compute Module</para>
+</simplesect>
+This function specifies the action to take when Supervised boot event triggers based on a file change. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>policy_id</parametername>
 </parameternamelist>
@@ -4578,7 +4648,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1752" column="5" declfile="zk_app_utils.h" declline="1752" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1786" column="5" declfile="zk_app_utils.h" declline="1786" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1ab06553594ce4f49df7fa89858037d539" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4598,10 +4668,12 @@
           <declname>slot</declname>
         </param>
         <briefdescription>
-<para>Update file manifest for Supervised boot to check. (Supported Devices: Secure Compute Module) </para>
+<para>Update file manifest for Supervised boot to check. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function adds or updates files to be checked by Supervised boot. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>Secure Compute Module</para>
+</simplesect>
+This function adds or updates files to be checked by Supervised boot. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>file_path</parametername>
 </parameternamelist>
@@ -4624,7 +4696,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1764" column="5" declfile="zk_app_utils.h" declline="1764" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1799" column="5" declfile="zk_app_utils.h" declline="1799" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1acd4c92be98f7878ff8d02bdfc6e29807" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4640,10 +4712,12 @@
           <declname>file_path</declname>
         </param>
         <briefdescription>
-<para>Remove a file from file manifest for Supervised boot to check. (Supported Devices: Secure Compute Module) </para>
+<para>Remove a file from file manifest for Supervised boot to check. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function removes a file to be checked by Supervised boot. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>Secure Compute Module</para>
+</simplesect>
+This function removes a file to be checked by Supervised boot. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>file_path</parametername>
 </parameternamelist>
@@ -4658,7 +4732,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1774" column="5" declfile="zk_app_utils.h" declline="1774" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1810" column="5" declfile="zk_app_utils.h" declline="1810" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="zk__app__utils_8h_1a198d422a9c7983583c74a1880dadc131" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4674,10 +4748,12 @@
           <declname>manifest</declname>
         </param>
         <briefdescription>
-<para>Get file manifest for Supervised boot to check. (Supported Devices: Secure Compute Module) </para>
+<para>Get file manifest for Supervised boot to check. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function gets the list of files to be checked by Supervised boot. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>Secure Compute Module</para>
+</simplesect>
+This function gets the list of files to be checked by Supervised boot. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>manifest</parametername>
 </parameternamelist>
@@ -4692,7 +4768,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="zk_app_utils.h" line="1784" column="5" declfile="zk_app_utils.h" declline="1784" declcolumn="5"/>
+        <location file="zk_app_utils.h" line="1821" column="5" declfile="zk_app_utils.h" declline="1821" declcolumn="5"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="define">

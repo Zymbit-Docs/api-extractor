@@ -8,7 +8,7 @@ import pytest
 
 from api_extractor import doxygen
 
-FIXTURES = Path(__file__).parent / "fixtures" / "zkapputilslib-c9b56b9"
+FIXTURES = Path(__file__).parent / "fixtures" / "zkapputilslib-ec73411"
 VERSIONS = ["doxygen-1.9.1", "doxygen-1.9.8"]
 PAGES = [("c", "zk_app_utils.h"), ("cpp", "zkAppUtilsClass.h")]
 CASES = [(v, lang, header) for v in VERSIONS for lang, header in PAGES]
@@ -50,6 +50,11 @@ def test_every_comment_word_reaches_the_json(version, lang, header):
             for section in cdef.iter("sectiondef"):
                 if section.get("kind") in doxygen.PRIVATE_SECTIONS:
                     section.clear()
+            # The @supported heading is structure; its devices are data.
+            for sect in cdef.iter("simplesect"):
+                title = sect.find("title")
+                if title is not None and title.text == "Supported Devices:":
+                    sect.remove(title)
             for tag in ("briefdescription", "detaileddescription"):
                 for desc in cdef.iter(tag):
                     want.update(WORD.findall(" ".join(desc.itertext())))
@@ -105,6 +110,46 @@ def test_known_content():
 
     # @note blocks, which hugoify never rendered.
     assert sum(len(i["notes"]) for i in items(c["groups"])) > 0
+
+
+@pytest.mark.parametrize("lang,header,tagged", [("c", "zk_app_utils.h", 38),
+                                                ("cpp", "zkAppUtilsClass.h", 36)])
+def test_supported_tag_becomes_data(lang, header, tagged):
+    data = extract("doxygen-1.9.1", lang, header)
+    xml = FIXTURES / "doxygen-1.9.1" / lang / "xml"
+    assert sum(p.read_text().count("<title>Supported Devices:</title>")
+               for p in xml.glob("*.xml")) == tagged
+    with_devices = [i for i in items(data["groups"]) if i["supported"]]
+    assert len(with_devices) == tagged
+    for i in with_devices:
+        assert i["supported"] in (["ZYMKEY5", "HSM60", "HSM64", "HSM6", "Secure Compute Module"],
+                                  ["Secure Compute Module"])
+        assert "Supported Devices" not in i["brief"] + i["details"]
+
+
+def test_supported_tag_content():
+    c = extract("doxygen-1.9.1", "c", "zk_app_utils.h")
+    by_name = {i["name"]: i for i in items(c["groups"])}
+    assert by_name["zkDoRawECDH"]["brief"] == "Perform a raw ECDH operation."
+    assert by_name["zkSetSupervisedBootPolicy"]["supported"] == ["Secure Compute Module"]
+    assert by_name["zkGenWalletChildKey"]["brief"] == "Generate child key from a parent key in a blockchain wallet."
+    # Parameter notes are still prose, and still parsed.
+    param = next(p for p in by_name["zkExportPubKey2File"]["params"] if p["name"] == "slot_is_foreign")
+    assert param["supported"][0] == "ZYMKEY5"
+
+
+SUPPORTED = '<simplesect kind="par"><title>Supported Devices:</title><para>{}</para></simplesect>'
+
+
+@pytest.mark.parametrize("tags", [
+    [SUPPORTED.format("HSM60, HSM7")],                        # typo or unknown device
+    [SUPPORTED.format("HSM6"), SUPPORTED.format("HSM60")],    # two tags
+])
+def test_bad_supported_tag_fails_loudly(tags):
+    conv = doxygen.Converter({})
+    desc = ET.fromstring(f"<detaileddescription><para>{''.join(tags)}</para></detaileddescription>")
+    with pytest.raises(doxygen.UnsupportedMarkup):
+        conv.blocks(desc, {})
 
 
 def test_cpp_gaps_are_filled():

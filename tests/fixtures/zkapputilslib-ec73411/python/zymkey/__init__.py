@@ -823,7 +823,11 @@ class Zymkey(object):
         peer_pubkey_slot_is_foreign: bool = True,
         derived_key_size: bool = 32,
     ) -> bytearray:
-        """Derive a key or a pre-master secret from an ECDH operation. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module).
+        """Derive a key or a pre-master secret from an ECDH operation.
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Parameters
         ----------
@@ -1063,9 +1067,13 @@ class Zymkey(object):
         return data_array
 
     def get_slot_alloc_list(self, foreign: bool = False) -> t.Tuple[list, int]:
-        """Get a list of the allocated slots in the key store (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module).
+        """Get a list of the allocated slots in the key store.
 
         This method gets a list of the allocated slots in the key store.
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Parameters
         ----------
@@ -1102,9 +1110,13 @@ class Zymkey(object):
         return alloc_keys, max_num_keys.value
 
     def store_foreign_public_key(self, key_type: str, pubkey: bytearray) -> int:
-        """Stores a foreign public key on the Zymkey foreign keyring (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module).
+        """Stores a foreign public key on the Zymkey foreign keyring.
 
         This method stores a foreign public key onto the Zymkey foreign public keyring.
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Parameters
         ----------
@@ -1133,10 +1145,14 @@ class Zymkey(object):
         return ret
 
     def disable_public_key_export(self, slot=0, foreign=False):
-        """Disable exporting of a public key at a given slot (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module).
+        """Disable exporting of a public key at a given slot.
 
         This method permanently disables exporting a public key from a
         given slot.
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Parameters
         ----------
@@ -1155,9 +1171,13 @@ class Zymkey(object):
             raise AssertionError("bad return code %d" % ret)
 
     def gen_key_pair(self, key_type):
-        """Generate a new key pair (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module).
+        """Generate a new key pair.
 
         This method generates a new key pair of the specified type.
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Parameters
         ----------
@@ -1177,10 +1197,14 @@ class Zymkey(object):
         return ret
 
     def gen_ephemeral_key_pair(self, key_type):
-        """Generate a new ephemeral key pair (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module).
+        """Generate a new ephemeral key pair.
 
         This method generates a new ephemeral key pair of the specified
         type, overwriting the previous ephemeral key pair.
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Parameters
         ----------
@@ -1199,10 +1223,14 @@ class Zymkey(object):
             raise AssertionError("bad return code %d" % ret)
 
     def remove_key(self, slot, foreign=False):
-        """Remove a key at the designated slot (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module).
+        """Remove a key at the designated slot.
 
         This method removes a key at the designated slot in either the
         standard key store or the foreign public keyring.
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Parameters
         ----------
@@ -1221,10 +1249,14 @@ class Zymkey(object):
             raise AssertionError("bad return code %d" % ret)
 
     def invalidate_ephemeral_key(self) -> int:
-        """Invalidate the ephemeral key (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module).
+        """Invalidate the ephemeral key.
 
         This method invalidates the ephemeral key, effectively removing
         it from service until a new key is generated.
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Raises
         ------
@@ -1253,10 +1285,14 @@ class Zymkey(object):
         wallet_name,
         recovery_strategy=RecoveryStrategy(),
     ):
-        """Generates a new master seed for creating a new BIP32 wallet (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module).
+        """Generates a new master seed for creating a new BIP32 wallet.
 
         This method generates a new master seed for creating a new BIP32
         wallet.
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Parameters
         ----------
@@ -1335,10 +1371,14 @@ class Zymkey(object):
         member_count,
         member_threshold,
     ):
-        """Configures the number of members and threshold for the group shares (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module).
+        """Configures the number of members and threshold for the group shares.
 
         This method sets the number of members required for a group share once a SLIP39 session
         was opened via gen_wallet_master_seed().
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Parameters
         ----------
@@ -1363,11 +1403,15 @@ class Zymkey(object):
         self,
         passphrase = "",
     ):
-        """Generates a new mnemonic_str tied to a SLIP39 member (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module).
+        """Generates a new mnemonic_str tied to a SLIP39 member.
 
         This method generates a new member of a group share. Members can also be
         passphrase protected. Passphrases are not required to be unique. This
         function is meant to be called after configuring a group via set_gen_SLIP39_group_info().
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Parameters
         ----------
@@ -1391,9 +1435,13 @@ class Zymkey(object):
         return ret, mnemonic.value.decode("utf-8")
 
     def cancel_SLIP39_session(self):
-        """Cancels an active SLIP39 session (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module).
+        """Cancels an active SLIP39 session.
 
         This method cancels an ongoing SLIP39 session for both master seed generation and recovery.
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Returns
         -------
@@ -1414,10 +1462,14 @@ class Zymkey(object):
         wallet_name,
         variant = ""
     ):
-        """Generates a supervisory bip32 wallet. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module).
+        """Generates a supervisory bip32 wallet.
 
         This method generates a new supervisory Bip32 wallet. Meant for
         read-only transactions and supervising history.
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Parameters
         ----------
@@ -1465,10 +1517,14 @@ class Zymkey(object):
         return ret
 
     def gen_wallet_child_key(self, parent_key_slot, index, hardened, return_chain_code = False):
-        """Generates a child key based on a parent key that is in a wallet (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module).
+        """Generates a child key based on a parent key that is in a wallet.
 
         This method generates a child key based on a parent key that is
         in a wallet.
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Parameters
         ----------
@@ -1509,11 +1565,15 @@ class Zymkey(object):
     def restore_wallet_master_seed(
         self, key_type, master_gen_key, wallet_name, recovery_strategy, mnemonics = None
     ):
-        """Restore a wallet's master seed based on the recovery strategy object (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module).
+        """Restore a wallet's master seed based on the recovery strategy object.
 
         This method restores a wallet's master seed based on a
         mnemonic string and a master generator key. This method can be
         used in the process of wallet duplication.
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Parameters
         ----------
@@ -1576,11 +1636,15 @@ class Zymkey(object):
         mnemonic_sentence,
         passphrase = "",
     ):
-        """Feed a mnemonic string and the passphrase associated with it (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module).
+        """Feed a mnemonic string and the passphrase associated with it.
 
         This method feeds in mnemonic sentences (shards) into the module.
         Meant to be called after starting a restore_wallet_master_seed() SLIP39 session.
         Will return -1 until the master seed is reconstructed properly.
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Parameters
         ----------
@@ -1601,11 +1665,15 @@ class Zymkey(object):
         return ret
 
     def get_wallet_node_addr(self, slot):
-        """Get a wallet node address from a key slot (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module)
+        """Get a wallet node address from a key slot
 
         This method gets a wallet entry's node address from its key slot
         assignment. The wallet name and master seed slot are also
         returned.
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Parameters
         ----------
@@ -1638,11 +1706,15 @@ class Zymkey(object):
         )
 
     def get_wallet_key_slot(self, node_addr, wallet_name=None, master_seed_slot=None):
-        """Look up a wallet key slot number from a node address (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module)
+        """Look up a wallet key slot number from a node address
 
         This method gets a wallet key slot number from its node address
         and wallet name or master seed key slot. Either the wallet name
         or the master seed slot must be present.
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Parameters
         ----------
@@ -1929,9 +2001,13 @@ class Zymkey(object):
             raise AssertionError("bad return code %d" % ret)
 
     def set_digital_perimeter_lp_period(self, lp_period):
-        """Set the digital perimeter detect low power period (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module).
+        """Set the digital perimeter detect low power period.
 
         This function sets the digital perimeter detect low power period (microseconds).
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Parameters
         ----------
@@ -1948,9 +2024,13 @@ class Zymkey(object):
             raise AssertionError("bad return code %d" % ret)
 
     def set_digital_perimeter_lp_max_bits(self, max_num_bits):
-        """Set the low power max number of bits (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module).
+        """Set the low power max number of bits.
 
         This function sets the digital perimeter detect low power max number of bits
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Parameters
         ----------
@@ -1967,9 +2047,13 @@ class Zymkey(object):
             raise AssertionError("bad return code %d" % ret)
 
     def set_digital_perimeter_delays(self, min_delay_ns, max_delay_ns):
-        """Set the digital perimeter detect delays (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module).
+        """Set the digital perimeter detect delays.
 
         This function sets the digital perimeter detect delay values.
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Parameters
         ----------
@@ -2062,9 +2146,13 @@ class Zymkey(object):
     ###@{
 
     def get_cpu_temp(self):
-        """Get current CPU temperature (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module).
+        """Get current CPU temperature.
 
         This function gets the current HSM CPU temperature.
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Returns
         -------
@@ -2101,9 +2189,13 @@ class Zymkey(object):
         return temp.value
 
     def get_rtc_drift(self):
-        """Get RTC drift (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module).
+        """Get RTC drift.
 
         This function gets the current RTC drift.
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Returns
         -------
@@ -2117,9 +2209,13 @@ class Zymkey(object):
         return drift.value
 
     def get_batt_volt(self):
-        """Get current battery voltage (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module).
+        """Get current battery voltage.
 
         This function gets the current battery voltage.
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Returns
         -------
@@ -2194,7 +2290,7 @@ class Zymkey(object):
     ###@{
 
     def set_battery_voltage_action(self, sleep=False, self_destruct=False):
-        """Set battery voltage action. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module)
+        """Set battery voltage action.
 
         This function specifies the action to take when the
         battery voltage falls below the threshold set by
@@ -2205,6 +2301,10 @@ class Zymkey(object):
           * Self-destruct
         With sleep and self_destruct set to False, it removes a
         previously set sleep or self_destruct action.
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Parameters
         ----------
@@ -2231,13 +2331,17 @@ class Zymkey(object):
             raise AssertionError("bad return code %d" % ret)
 
     def set_battery_voltage_threshold(self, threshold):
-        """Sets the battery voltage threshold. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module)
+        """Sets the battery voltage threshold.
 
         This function sets the threshold at which if the
         battery voltage falls bellow, the action set by
         set_battery_voltage_action will be carried out.
         The recommended threshold is 2.3V is assumed by default. Threshold
         must be below 2.5V.
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Parameters
         ----------
@@ -2259,7 +2363,7 @@ class Zymkey(object):
     ###@{
 
     def set_cpu_temp_action(self, self_destruct=False):
-        """Set HSM CPU temperature threshold action. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module)
+        """Set HSM CPU temperature threshold action.
 
         This function specifies the action to take when the
         HSM CPU temperature falls below the threshold set by
@@ -2270,6 +2374,10 @@ class Zymkey(object):
           * Self-destruct
         To remove a previously set self-destruct action, call
         this function with self_destruct=False.
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Parameters
         ----------
@@ -2290,7 +2398,7 @@ class Zymkey(object):
             raise AssertionError("bad return code %d" % ret)
 
     def set_cpu_low_temp_threshold(self, threshold):
-        """Sets the HSM CPU low temperature threshold. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module)
+        """Sets the HSM CPU low temperature threshold.
 
         This function sets the threshold at which if the
         on-board HSM CPU's tempreature falls below, the
@@ -2300,6 +2408,10 @@ class Zymkey(object):
         The recommended setting is no more than 20C.
         If this function is never called, -10 degrees celsius is
         assumed.
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Parameters
         ----------
@@ -2316,7 +2428,7 @@ class Zymkey(object):
             raise AssertionError("bad return code %d" % ret)
 
     def set_cpu_high_temp_threshold(self, threshold):
-        """Sets the HSM CPU high temperature threshold. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module)
+        """Sets the HSM CPU high temperature threshold.
 
         This function sets the threshold at which if the
         on-board HSM CPU's tempreature rises above, the
@@ -2326,6 +2438,10 @@ class Zymkey(object):
         The recommended setting is no less than 40C.
         If this function is never called, 65 degrees celsius is
         assumed.
+
+        Supported Devices
+        -----------------
+        ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module
 
         Parameters
         ----------
@@ -2342,10 +2458,14 @@ class Zymkey(object):
             raise AssertionError("bad return code %d" % ret)
 
     def set_supervised_boot_policy(self, policy_id : int = 0):
-        """Sets the Supervised boot policy. (Supported Devices: Secure Compute Module)
+        """Sets the Supervised boot policy.
 
         This function sets the action policy to take when
         Supervised boot detects a file change during the boot process.
+
+        Supported Devices
+        -----------------
+        Secure Compute Module
 
         Parameters
         ----------
@@ -2365,10 +2485,14 @@ class Zymkey(object):
             raise AssertionError("bad return code %d" % ret)
 
     def add_or_update_supervised_boot_file(self, filepath : str = "", slot : int = 15):
-        """Update file manifest for Supervised boot to check. (Supported Devices: Secure Compute Module)
+        """Update file manifest for Supervised boot to check.
 
         This function adds or updates a file in the file manifest to
         be checked by Supervised during the boot process.
+
+        Supported Devices
+        -----------------
+        Secure Compute Module
 
         Parameters
         ----------
@@ -2388,10 +2512,14 @@ class Zymkey(object):
             raise AssertionError("bad return code %d" % ret)
 
     def remove_supervised_boot_file(self, filepath : str = ""):
-        """Remove a file from file manifest for Supervised boot to check. (Supported Devices: Secure Compute Module)
+        """Remove a file from file manifest for Supervised boot to check.
 
         This function removes a file in the file manifest to
         be checked by Supervised boot during the boot process.
+
+        Supported Devices
+        -----------------
+        Secure Compute Module
 
         Parameters
         ----------
@@ -2409,10 +2537,14 @@ class Zymkey(object):
             raise AssertionError("bad return code %d" % ret)
 
     def get_supervised_boot_file_manifest(self):
-        """Get the file manifest for Supervised boot to check. (Supported Devices: Secure Compute Module)
+        """Get the file manifest for Supervised boot to check.
 
         This function gets a list of the files that are checked
         by Supervised boot during the boot process.
+
+        Supported Devices
+        -----------------
+        Secure Compute Module
 
         Returns
         -------

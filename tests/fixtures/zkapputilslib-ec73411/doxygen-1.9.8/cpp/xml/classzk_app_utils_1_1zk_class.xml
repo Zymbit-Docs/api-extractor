@@ -1,15 +1,16 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="classzk_app_utils_1_1zk_class" kind="class" language="C++" prot="public">
     <compoundname>zkAppUtils::zkClass</compoundname>
     <includes refid="zk_app_utils_class_8h" local="no">zkAppUtilsClass.h</includes>
-      <sectiondef kind="user-defined">
+    <sectiondef kind="user-defined">
       <header>Zymkey Context</header>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1af2017a24669f2f1f84743ab8eb1b2e6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>zkAppUtils::zkClass::zkClass</definition>
         <argsstring>()</argsstring>
         <name>zkClass</name>
+        <qualifiedname>zkAppUtils::zkClass::zkClass</qualifiedname>
         <briefdescription>
 <para>Constructor: a Zymkey context is opened. </para>
         </briefdescription>
@@ -34,6 +35,7 @@
         <definition>virtual zkAppUtils::zkClass::~zkClass</definition>
         <argsstring>()</argsstring>
         <name>~zkClass</name>
+        <qualifiedname>zkAppUtils::zkClass::~zkClass</qualifiedname>
         <briefdescription>
 <para>Destructor: the Zymkey context is closed. </para>
         </briefdescription>
@@ -43,14 +45,15 @@
         </inbodydescription>
         <location file="C++/zkAppUtilsClass.h" line="226" column="17"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="user-defined">
+    </sectiondef>
+    <sectiondef kind="user-defined">
       <header>Random Number Generation</header>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a9a4a7c019b82d8b1760ae9f743de944d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::createRandDataFile</definition>
         <argsstring>(std::string &amp;dst_filename, int rdata_sz)</argsstring>
         <name>createRandDataFile</name>
+        <qualifiedname>zkAppUtils::zkClass::createRandDataFile</qualifiedname>
         <param>
           <type>std::string &amp;</type>
           <declname>dst_filename</declname>
@@ -95,11 +98,12 @@
         </inbodydescription>
         <location file="C++/zkAppUtilsClass.h" line="255" column="14"/>
       </memberdef>
-      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1ae6c1bc3ff39beea99f72e7740c528313" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a710adb889c21dabb89f61f76a81f6446" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="zk_app_utils_class_8h_1a8cb247b41a182478fcdf780c1ce524e3" kindref="member">zkAppUtils::byteArray</ref> *</type>
-        <definition>zkAppUtils::byteArray* zkAppUtils::zkClass::getRandBytes</definition>
+        <definition>zkAppUtils::byteArray * zkAppUtils::zkClass::getRandBytes</definition>
         <argsstring>(int rdata_sz)</argsstring>
         <name>getRandBytes</name>
+        <qualifiedname>zkAppUtils::zkClass::getRandBytes</qualifiedname>
         <param>
           <type>int</type>
           <declname>rdata_sz</declname>
@@ -134,14 +138,15 @@
         </inbodydescription>
         <location file="C++/zkAppUtilsClass.h" line="263" column="31"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="user-defined">
+    </sectiondef>
+    <sectiondef kind="user-defined">
       <header>Lock Data</header>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a65aee74e18121f104b8420822013452e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::lockData</definition>
         <argsstring>(const std::string &amp;src_pt_filename, const std::string &amp;dst_ct_filename, bool use_shared_key=false)</argsstring>
         <name>lockData</name>
+        <qualifiedname>zkAppUtils::zkClass::lockData</qualifiedname>
         <param>
           <type>const std::string &amp;</type>
           <declname>src_pt_filename</declname>
@@ -204,6 +209,7 @@
         <definition>void zkAppUtils::zkClass::lockData</definition>
         <argsstring>(const byteArray &amp;src_pt_data, const std::string &amp;dst_ct_filename, bool use_shared_key=false)</argsstring>
         <name>lockData</name>
+        <qualifiedname>zkAppUtils::zkClass::lockData</qualifiedname>
         <param>
           <type>const <ref refid="zk_app_utils_class_8h_1a8cb247b41a182478fcdf780c1ce524e3" kindref="member">byteArray</ref> &amp;</type>
           <declname>src_pt_data</declname>
@@ -261,11 +267,12 @@
         </inbodydescription>
         <location file="C++/zkAppUtilsClass.h" line="301" column="14"/>
       </memberdef>
-      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a749ea09595c364126d54f99022d4ceb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1ac57f7a6a758248406bd2ad92e8b1d3ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="zk_app_utils_class_8h_1a8cb247b41a182478fcdf780c1ce524e3" kindref="member">zkAppUtils::byteArray</ref> *</type>
-        <definition>zkAppUtils::byteArray* zkAppUtils::zkClass::lockData</definition>
+        <definition>zkAppUtils::byteArray * zkAppUtils::zkClass::lockData</definition>
         <argsstring>(const std::string &amp;src_pt_filename, bool use_shared_key=false)</argsstring>
         <name>lockData</name>
+        <qualifiedname>zkAppUtils::zkClass::lockData</qualifiedname>
         <param>
           <type>const std::string &amp;</type>
           <declname>src_pt_filename</declname>
@@ -313,11 +320,12 @@
         </inbodydescription>
         <location file="C++/zkAppUtilsClass.h" line="315" column="31"/>
       </memberdef>
-      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a5302506bc51be472e44f3f21b7223a2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1aa6a70fd15ea113d66ee65f239bd06600" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="zk_app_utils_class_8h_1a8cb247b41a182478fcdf780c1ce524e3" kindref="member">zkAppUtils::byteArray</ref> *</type>
-        <definition>zkAppUtils::byteArray* zkAppUtils::zkClass::lockData</definition>
+        <definition>zkAppUtils::byteArray * zkAppUtils::zkClass::lockData</definition>
         <argsstring>(const byteArray &amp;src_pt_data, bool use_shared_key=false)</argsstring>
         <name>lockData</name>
+        <qualifiedname>zkAppUtils::zkClass::lockData</qualifiedname>
         <param>
           <type>const <ref refid="zk_app_utils_class_8h_1a8cb247b41a182478fcdf780c1ce524e3" kindref="member">byteArray</ref> &amp;</type>
           <declname>src_pt_data</declname>
@@ -365,14 +373,15 @@
         </inbodydescription>
         <location file="C++/zkAppUtilsClass.h" line="328" column="31"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="user-defined">
+    </sectiondef>
+    <sectiondef kind="user-defined">
       <header>Unlock Data</header>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a0ecbe6c828556f8f762fb74e628f13af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::unlockData</definition>
         <argsstring>(const std::string &amp;src_ct_filename, const std::string &amp;dst_pt_filename, bool use_shared_key=false)</argsstring>
         <name>unlockData</name>
+        <qualifiedname>zkAppUtils::zkClass::unlockData</qualifiedname>
         <param>
           <type>const std::string &amp;</type>
           <declname>src_ct_filename</declname>
@@ -435,6 +444,7 @@
         <definition>void zkAppUtils::zkClass::unlockData</definition>
         <argsstring>(const byteArray &amp;src_ct_data, const std::string &amp;dst_pt_filename, bool use_shared_key=false)</argsstring>
         <name>unlockData</name>
+        <qualifiedname>zkAppUtils::zkClass::unlockData</qualifiedname>
         <param>
           <type>const <ref refid="zk_app_utils_class_8h_1a8cb247b41a182478fcdf780c1ce524e3" kindref="member">byteArray</ref> &amp;</type>
           <declname>src_ct_data</declname>
@@ -492,11 +502,12 @@
         </inbodydescription>
         <location file="C++/zkAppUtilsClass.h" line="367" column="14"/>
       </memberdef>
-      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1ada1f322ad059f421c48af150a5a0beec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a4acdb8f7a6a6f97285ede36ba1d34fe3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="zk_app_utils_class_8h_1a8cb247b41a182478fcdf780c1ce524e3" kindref="member">zkAppUtils::byteArray</ref> *</type>
-        <definition>zkAppUtils::byteArray* zkAppUtils::zkClass::unlockData</definition>
+        <definition>zkAppUtils::byteArray * zkAppUtils::zkClass::unlockData</definition>
         <argsstring>(const std::string &amp;src_ct_filename, bool use_shared_key=false)</argsstring>
         <name>unlockData</name>
+        <qualifiedname>zkAppUtils::zkClass::unlockData</qualifiedname>
         <param>
           <type>const std::string &amp;</type>
           <declname>src_ct_filename</declname>
@@ -544,11 +555,12 @@
         </inbodydescription>
         <location file="C++/zkAppUtilsClass.h" line="382" column="31"/>
       </memberdef>
-      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a0c33653e5fe062d0784f64e4ac07ce08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a6c9c6974bd00b81de17ab6e316c509f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="zk_app_utils_class_8h_1a8cb247b41a182478fcdf780c1ce524e3" kindref="member">zkAppUtils::byteArray</ref> *</type>
-        <definition>zkAppUtils::byteArray* zkAppUtils::zkClass::unlockData</definition>
+        <definition>zkAppUtils::byteArray * zkAppUtils::zkClass::unlockData</definition>
         <argsstring>(const byteArray &amp;src_ct_bytes, bool use_shared_key=false)</argsstring>
         <name>unlockData</name>
+        <qualifiedname>zkAppUtils::zkClass::unlockData</qualifiedname>
         <param>
           <type>const <ref refid="zk_app_utils_class_8h_1a8cb247b41a182478fcdf780c1ce524e3" kindref="member">byteArray</ref> &amp;</type>
           <declname>src_ct_bytes</declname>
@@ -596,14 +608,15 @@
         </inbodydescription>
         <location file="C++/zkAppUtilsClass.h" line="396" column="31"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="user-defined">
+    </sectiondef>
+    <sectiondef kind="user-defined">
       <header>ECDSA</header>
-      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1aa4da8d53be65803af718a336407ea6d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1ab007adf3d85c5a488dd28b6cf182d5b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="zk_app_utils_class_8h_1a8cb247b41a182478fcdf780c1ce524e3" kindref="member">zkAppUtils::byteArray</ref> *</type>
-        <definition>zkAppUtils::byteArray* zkAppUtils::zkClass::genECDSASigFromDigest</definition>
+        <definition>zkAppUtils::byteArray * zkAppUtils::zkClass::genECDSASigFromDigest</definition>
         <argsstring>(byteArray &amp;digest, int slot=0)</argsstring>
         <name>genECDSASigFromDigest</name>
+        <qualifiedname>zkAppUtils::zkClass::genECDSASigFromDigest</qualifiedname>
         <param>
           <type><ref refid="zk_app_utils_class_8h_1a8cb247b41a182478fcdf780c1ce524e3" kindref="member">byteArray</ref> &amp;</type>
           <declname>digest</declname>
@@ -651,11 +664,12 @@
         </inbodydescription>
         <location file="C++/zkAppUtilsClass.h" line="415" column="31"/>
       </memberdef>
-      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a11af5c32dc4d0a87b072e7b056a550e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1ab1d956eac6affc32b82eb27bc4ae9b57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="zk_app_utils_class_8h_1a8cb247b41a182478fcdf780c1ce524e3" kindref="member">zkAppUtils::byteArray</ref> *</type>
-        <definition>zkAppUtils::byteArray* zkAppUtils::zkClass::genECDSASigFromDigest</definition>
+        <definition>zkAppUtils::byteArray * zkAppUtils::zkClass::genECDSASigFromDigest</definition>
         <argsstring>(byteArray &amp;digest, uint8_t &amp;recovery_id, int slot=0)</argsstring>
         <name>genECDSASigFromDigest</name>
+        <qualifiedname>zkAppUtils::zkClass::genECDSASigFromDigest</qualifiedname>
         <param>
           <type><ref refid="zk_app_utils_class_8h_1a8cb247b41a182478fcdf780c1ce524e3" kindref="member">byteArray</ref> &amp;</type>
           <declname>digest</declname>
@@ -720,6 +734,7 @@
         <definition>bool zkAppUtils::zkClass::verifyECDSASigFromDigest</definition>
         <argsstring>(byteArray &amp;digest, byteArray &amp;sig, int pub_key_slot=0, bool pub_key_is_foreign=false)</argsstring>
         <name>verifyECDSASigFromDigest</name>
+        <qualifiedname>zkAppUtils::zkClass::verifyECDSASigFromDigest</qualifiedname>
         <param>
           <type><ref refid="zk_app_utils_class_8h_1a8cb247b41a182478fcdf780c1ce524e3" kindref="member">byteArray</ref> &amp;</type>
           <declname>digest</declname>
@@ -791,14 +806,15 @@
         </inbodydescription>
         <location file="C++/zkAppUtilsClass.h" line="450" column="14"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="user-defined">
+    </sectiondef>
+    <sectiondef kind="user-defined">
       <header>ECDH and KDF</header>
-      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a094c61c54bcc4c064e961a75ad92c04b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a92667fd60df92fa92b31fe8cdb3c08f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="zk_app_utils_class_8h_1a8cb247b41a182478fcdf780c1ce524e3" kindref="member">zkAppUtils::byteArray</ref> *</type>
-        <definition>zkAppUtils::byteArray* zkAppUtils::zkClass::doRawECDH</definition>
+        <definition>zkAppUtils::byteArray * zkAppUtils::zkClass::doRawECDH</definition>
         <argsstring>(int slot, byteArray &amp;peer_pubkey)</argsstring>
         <name>doRawECDH</name>
+        <qualifiedname>zkAppUtils::zkClass::doRawECDH</qualifiedname>
         <param>
           <type>int</type>
           <declname>slot</declname>
@@ -808,10 +824,12 @@
           <declname>peer_pubkey</declname>
         </param>
         <briefdescription>
-<para>Perform a raw ECDH operation. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Perform a raw ECDH operation. </para>
         </briefdescription>
         <detaileddescription>
-<para>Perform an ECDH operation with no Key Derivation Function (KDF). The raw pre-master secret is returned in the response. The peer public key is presented in the call. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+Perform an ECDH operation with no Key Derivation Function (KDF). The raw pre-master secret is returned in the response. The peer public key is presented in the call. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>slot</parametername>
 </parameternamelist>
@@ -834,13 +852,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="472" column="31"/>
+        <location file="C++/zkAppUtilsClass.h" line="473" column="31"/>
       </memberdef>
-      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1ac4c9c958cb219943bf590debfff42d8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a99c291436911e35c8ae2b1782a1b7e8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="zk_app_utils_class_8h_1a8cb247b41a182478fcdf780c1ce524e3" kindref="member">zkAppUtils::byteArray</ref> *</type>
-        <definition>zkAppUtils::byteArray* zkAppUtils::zkClass::doRawECDHWithIntPeerPubkey</definition>
+        <definition>zkAppUtils::byteArray * zkAppUtils::zkClass::doRawECDHWithIntPeerPubkey</definition>
         <argsstring>(int slot, int peer_pubkey_slot, bool peer_pubkey_slot_is_foreign)</argsstring>
         <name>doRawECDHWithIntPeerPubkey</name>
+        <qualifiedname>zkAppUtils::zkClass::doRawECDHWithIntPeerPubkey</qualifiedname>
         <param>
           <type>int</type>
           <declname>slot</declname>
@@ -854,10 +873,12 @@
           <declname>peer_pubkey_slot_is_foreign</declname>
         </param>
         <briefdescription>
-<para>Perform a raw ECDH operation. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Perform a raw ECDH operation. </para>
         </briefdescription>
         <detaileddescription>
-<para>Perform an ECDH operation with no Key Derivation Function (KDF). The raw pre-master secret is returned in the response. The peer public key is referenced from the zymkey internal key store. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+Perform an ECDH operation with no Key Derivation Function (KDF). The raw pre-master secret is returned in the response. The peer public key is referenced from the zymkey internal key store. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>slot</parametername>
 </parameternamelist>
@@ -888,13 +909,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="489" column="31"/>
+        <location file="C++/zkAppUtilsClass.h" line="491" column="31"/>
       </memberdef>
-      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1ac969e9bb26200c34d9b80b6b3287fc4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a346e58ecb0fd1947bb11af399c8c0188" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="zk_app_utils_class_8h_1a8cb247b41a182478fcdf780c1ce524e3" kindref="member">zkAppUtils::byteArray</ref> *</type>
-        <definition>zkAppUtils::byteArray* zkAppUtils::zkClass::doECDHAndKDF</definition>
+        <definition>zkAppUtils::byteArray * zkAppUtils::zkClass::doECDHAndKDF</definition>
         <argsstring>(ZK_ECDH_KDF_TYPE kdf_type, int slot, byteArray &amp;peer_pubkey, byteArray &amp;salt, byteArray &amp;info, int num_iterations, int derived_key_sz)</argsstring>
         <name>doECDHAndKDF</name>
+        <qualifiedname>zkAppUtils::zkClass::doECDHAndKDF</qualifiedname>
         <param>
           <type>ZK_ECDH_KDF_TYPE</type>
           <declname>kdf_type</declname>
@@ -924,10 +946,12 @@
           <declname>derived_key_sz</declname>
         </param>
         <briefdescription>
-<para>Perform an ECDH operation plus Key Derivation Function. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Perform an ECDH operation plus Key Derivation Function. </para>
         </briefdescription>
         <detaileddescription>
-<para>Perform an ECDH operation with Key Derivation Function (KDF). The derived key is returned in the response. The peer public key is presented in the call. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+Perform an ECDH operation with Key Derivation Function (KDF). The derived key is returned in the response. The peer public key is presented in the call. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>slot</parametername>
 </parameternamelist>
@@ -982,13 +1006,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="513" column="30"/>
+        <location file="C++/zkAppUtilsClass.h" line="516" column="30"/>
       </memberdef>
-      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1ad76f1a1781c845623194d7d3e420796f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a2db20d758c7c1872426cbf8cd4501d39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="zk_app_utils_class_8h_1a8cb247b41a182478fcdf780c1ce524e3" kindref="member">zkAppUtils::byteArray</ref> *</type>
-        <definition>zkAppUtils::byteArray* zkAppUtils::zkClass::doECDHAndKDFWithIntPeerPubkey</definition>
+        <definition>zkAppUtils::byteArray * zkAppUtils::zkClass::doECDHAndKDFWithIntPeerPubkey</definition>
         <argsstring>(ZK_ECDH_KDF_TYPE kdf_type, int slot, int peer_pubkey_slot, bool peer_pubkey_slot_is_foreign, byteArray &amp;salt, byteArray &amp;info, int num_iterations, int derived_key_sz)</argsstring>
         <name>doECDHAndKDFWithIntPeerPubkey</name>
+        <qualifiedname>zkAppUtils::zkClass::doECDHAndKDFWithIntPeerPubkey</qualifiedname>
         <param>
           <type>ZK_ECDH_KDF_TYPE</type>
           <declname>kdf_type</declname>
@@ -1022,10 +1047,12 @@
           <declname>derived_key_sz</declname>
         </param>
         <briefdescription>
-<para>Perform an ECDH operation plus Key Derivation Function. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Perform an ECDH operation plus Key Derivation Function. </para>
         </briefdescription>
         <detaileddescription>
-<para>Perform an ECDH operation with Key Derivation Function (KDF). The derived key is returned in the response. The peer public key is referenced from the zymkey internal key store. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+Perform an ECDH operation with Key Derivation Function (KDF). The derived key is returned in the response. The peer public key is referenced from the zymkey internal key store. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>slot</parametername>
 </parameternamelist>
@@ -1088,16 +1115,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="544" column="30"/>
+        <location file="C++/zkAppUtilsClass.h" line="548" column="30"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="user-defined">
+    </sectiondef>
+    <sectiondef kind="user-defined">
       <header>Key Management</header>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a90e0ace2d84e42b6ccdaad122f9035c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::saveECDSAPubKey2File</definition>
         <argsstring>(std::string dst_filename, int slot=0)</argsstring>
         <name>saveECDSAPubKey2File</name>
+        <qualifiedname>zkAppUtils::zkClass::saveECDSAPubKey2File</qualifiedname>
         <param>
           <type>std::string</type>
           <declname>dst_filename</declname>
@@ -1141,13 +1169,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="572" column="14"/>
+        <location file="C++/zkAppUtilsClass.h" line="576" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a1bdc2d2f9d479a28af6de6cd7889020b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::exportPubKey2File</definition>
         <argsstring>(std::string dst_filename, int pubkey_slot=0, bool slot_is_foreign=false)</argsstring>
         <name>exportPubKey2File</name>
+        <qualifiedname>zkAppUtils::zkClass::exportPubKey2File</qualifiedname>
         <param>
           <type>std::string</type>
           <declname>dst_filename</declname>
@@ -1204,13 +1233,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="586" column="14"/>
+        <location file="C++/zkAppUtilsClass.h" line="590" column="14"/>
       </memberdef>
-      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a545db81233e96730f9d33af01b6983b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a43a830a3e3a51d9e5b3b09ffe037f858" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="zk_app_utils_class_8h_1a8cb247b41a182478fcdf780c1ce524e3" kindref="member">zkAppUtils::byteArray</ref> *</type>
-        <definition>zkAppUtils::byteArray* zkAppUtils::zkClass::getECDSAPubKey</definition>
+        <definition>zkAppUtils::byteArray * zkAppUtils::zkClass::getECDSAPubKey</definition>
         <argsstring>(int slot=0)</argsstring>
         <name>getECDSAPubKey</name>
+        <qualifiedname>zkAppUtils::zkClass::getECDSAPubKey</qualifiedname>
         <param>
           <type>int</type>
           <declname>slot</declname>
@@ -1244,13 +1274,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="596" column="31"/>
+        <location file="C++/zkAppUtilsClass.h" line="600" column="31"/>
       </memberdef>
-      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1ae13277c55222907a21537b790279d214" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1abb635d3e522ef15b4f675b1b1a05678e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="zk_app_utils_class_8h_1a8cb247b41a182478fcdf780c1ce524e3" kindref="member">zkAppUtils::byteArray</ref> *</type>
-        <definition>zkAppUtils::byteArray* zkAppUtils::zkClass::exportPubKey</definition>
+        <definition>zkAppUtils::byteArray * zkAppUtils::zkClass::exportPubKey</definition>
         <argsstring>(int pubkey_slot=0, bool slot_is_foreign=0)</argsstring>
         <name>exportPubKey</name>
+        <qualifiedname>zkAppUtils::zkClass::exportPubKey</qualifiedname>
         <param>
           <type>int</type>
           <declname>pubkey_slot</declname>
@@ -1295,22 +1326,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="606" column="31"/>
+        <location file="C++/zkAppUtilsClass.h" line="610" column="31"/>
       </memberdef>
-      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a636729b4700e21c3392bd75aac2d8873" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1adc53f82db51aafe1f5d6ec205cc55987" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="zk_app_utils_class_8h_1a7cc12af0cdc6374a29588629bd450da6" kindref="member">intArray</ref> *</type>
-        <definition>intArray* zkAppUtils::zkClass::getAllocSlotsList</definition>
+        <definition>intArray * zkAppUtils::zkClass::getAllocSlotsList</definition>
         <argsstring>(bool foreign_key_pool)</argsstring>
         <name>getAllocSlotsList</name>
+        <qualifiedname>zkAppUtils::zkClass::getAllocSlotsList</qualifiedname>
         <param>
           <type>bool</type>
           <declname>foreign_key_pool</declname>
         </param>
         <briefdescription>
-<para>Get the list of allocated keys. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Get the list of allocated keys. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function returns a list of all allocated key slots. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function returns a list of all allocated key slots. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>foreign_key_pool</parametername>
 </parameternamelist>
@@ -1325,13 +1359,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="615" column="18"/>
+        <location file="C++/zkAppUtilsClass.h" line="620" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1aa95d4e59e180197bf8e847b4d52d5001" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int zkAppUtils::zkClass::storeForeignPubKey</definition>
         <argsstring>(ZK_EC_KEY_TYPE pk_type, byteArray &amp;pk)</argsstring>
         <name>storeForeignPubKey</name>
+        <qualifiedname>zkAppUtils::zkClass::storeForeignPubKey</qualifiedname>
         <param>
           <type>ZK_EC_KEY_TYPE</type>
           <declname>pk_type</declname>
@@ -1341,10 +1376,12 @@
           <declname>pk</declname>
         </param>
         <briefdescription>
-<para>Store a new foreign public key in Zymkey. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Store a new foreign public key in Zymkey. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function stores a new foreign public key in the Zymkey public key ring. This public key can be used for signature verification in use cases where it is desirable to hide the public key. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function stores a new foreign public key in the Zymkey public key ring. This public key can be used for signature verification in use cases where it is desirable to hide the public key. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>pk_type</parametername>
 </parameternamelist>
@@ -1376,13 +1413,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="630" column="13"/>
+        <location file="C++/zkAppUtilsClass.h" line="636" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1ab730469e9e5ffb217455a775960732d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::disablePubKeyExport</definition>
         <argsstring>(int pubkey_slot, bool slot_is_foreign=false)</argsstring>
         <name>disablePubKeyExport</name>
+        <qualifiedname>zkAppUtils::zkClass::disablePubKeyExport</qualifiedname>
         <param>
           <type>int</type>
           <declname>pubkey_slot</declname>
@@ -1393,10 +1431,12 @@
           <defval>false</defval>
         </param>
         <briefdescription>
-<para>Prevent a public key from being exported to the host. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Prevent a public key from being exported to the host. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function prevents the public key at the specified slot from being exported to the host using the API zkExportPubKey. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function prevents the public key at the specified slot from being exported to the host using the API zkExportPubKey. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>pubkey_slot</parametername>
 </parameternamelist>
@@ -1426,22 +1466,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="641" column="14"/>
+        <location file="C++/zkAppUtilsClass.h" line="648" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1afa4595edba19c2c98109763898dbfc9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int zkAppUtils::zkClass::genKeyPair</definition>
         <argsstring>(ZK_EC_KEY_TYPE type)</argsstring>
         <name>genKeyPair</name>
+        <qualifiedname>zkAppUtils::zkClass::genKeyPair</qualifiedname>
         <param>
           <type>ZK_EC_KEY_TYPE</type>
           <declname>type</declname>
         </param>
         <briefdescription>
-<para>Generate a new persistent key pair. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Generate a new persistent key pair. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function generates a new key pair of the specified type and store it persistently. This key pair cannot be used as part of the zymkey&apos;s digital wallet operations. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function generates a new key pair of the specified type and store it persistently. This key pair cannot be used as part of the zymkey&apos;s digital wallet operations. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>type</parametername>
 </parameternamelist>
@@ -1465,22 +1508,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="653" column="13"/>
+        <location file="C++/zkAppUtilsClass.h" line="661" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1ada05198c035f694fda303a8b7e30b4b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::genEphemeralKeyPair</definition>
         <argsstring>(ZK_EC_KEY_TYPE type)</argsstring>
         <name>genEphemeralKeyPair</name>
+        <qualifiedname>zkAppUtils::zkClass::genEphemeralKeyPair</qualifiedname>
         <param>
           <type>ZK_EC_KEY_TYPE</type>
           <declname>type</declname>
         </param>
         <briefdescription>
-<para>Generate an ephemeral key pair. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Generate an ephemeral key pair. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function generates an ephemeral key pair of the specified type. Ephemeral key pairs are useful when performing ECDH for time-of-flight encryption. Only one ephemeral key slot is available and is not persistent between reboots. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function generates an ephemeral key pair of the specified type. Ephemeral key pairs are useful when performing ECDH for time-of-flight encryption. Only one ephemeral key slot is available and is not persistent between reboots. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>type</parametername>
 </parameternamelist>
@@ -1502,13 +1548,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="664" column="14"/>
+        <location file="C++/zkAppUtilsClass.h" line="673" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a62f486dc7c3502fd49c43f628a48fd62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::removeKey</definition>
         <argsstring>(int slot, bool slot_is_foreign=false)</argsstring>
         <name>removeKey</name>
+        <qualifiedname>zkAppUtils::zkClass::removeKey</qualifiedname>
         <param>
           <type>int</type>
           <declname>slot</declname>
@@ -1519,10 +1566,12 @@
           <defval>false</defval>
         </param>
         <briefdescription>
-<para>Remove a key pair or a foreign public key. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Remove a key pair or a foreign public key. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function deletes a key pair or a foreign public key from persistent storage. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function deletes a key pair or a foreign public key from persistent storage. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>slot</parametername>
 </parameternamelist>
@@ -1552,18 +1601,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="674" column="14"/>
+        <location file="C++/zkAppUtilsClass.h" line="684" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a2b2d25ba5fa9e7ddd56e293aeac069c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::invalidateEphemeralKey</definition>
         <argsstring>()</argsstring>
         <name>invalidateEphemeralKey</name>
+        <qualifiedname>zkAppUtils::zkClass::invalidateEphemeralKey</qualifiedname>
         <briefdescription>
-<para>Invalidate the ephemeral key. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Invalidate the ephemeral key. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function invalidates the ephemeral key. <parameterlist kind="exception"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function invalidates the ephemeral key. <parameterlist kind="exception"><parameteritem>
 <parameternamelist>
 <parametername>zkAppUtilsException</parametername>
 </parameternamelist>
@@ -1576,16 +1628,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="680" column="14"/>
+        <location file="C++/zkAppUtilsClass.h" line="691" column="14"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="user-defined">
+    </sectiondef>
+    <sectiondef kind="user-defined">
       <header>Digital Wallet (BIP32/39/44)</header>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a9a0b6ea782bbe1b628a821a0ad42a0ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int zkAppUtils::zkClass::genWalletMasterSeed</definition>
         <argsstring>(ZK_EC_KEY_TYPE type, std::string &amp;wallet_name, const recoveryStrategyBaseType &amp;recovery_strategy=recoveryStrategyBaseType(), const byteArray &amp;master_generator_key=byteArray())</argsstring>
         <name>genWalletMasterSeed</name>
+        <qualifiedname>zkAppUtils::zkClass::genWalletMasterSeed</qualifiedname>
         <param>
           <type>ZK_EC_KEY_TYPE</type>
           <declname>type</declname>
@@ -1605,10 +1658,12 @@
           <defval><ref refid="zk_app_utils_class_8h_1a8cb247b41a182478fcdf780c1ce524e3" kindref="member">byteArray</ref>()</defval>
         </param>
         <briefdescription>
-<para>Generate a BIP32 master seed to start a new blockchain wallet. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Generate a BIP32 master seed to start a new blockchain wallet. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function generates a new blockchain master seed for creating a new wallet per BIP32. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function generates a new blockchain master seed for creating a new wallet per BIP32. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>type</parametername>
 </parameternamelist>
@@ -1655,13 +1710,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="709" column="13"/>
+        <location file="C++/zkAppUtilsClass.h" line="721" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1acb12f4443c3d7b0fdc81f9cb18f78381" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int zkAppUtils::zkClass::genWalletMasterSeed</definition>
         <argsstring>(ZK_EC_KEY_TYPE type, std::string &amp;wallet_name, const recoveryStrategyBIP39 &amp;recovery_strategy, std::string *mnemonic_str, const byteArray &amp;master_generator_key=byteArray())</argsstring>
         <name>genWalletMasterSeed</name>
+        <qualifiedname>zkAppUtils::zkClass::genWalletMasterSeed</qualifiedname>
         <param>
           <type>ZK_EC_KEY_TYPE</type>
           <declname>type</declname>
@@ -1689,13 +1745,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="714" column="13"/>
+        <location file="C++/zkAppUtilsClass.h" line="726" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1add63278d1061e559bfc2509e2cf0febc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int zkAppUtils::zkClass::genWalletMasterSeed</definition>
         <argsstring>(ZK_EC_KEY_TYPE type, std::string &amp;wallet_name, const recoveryStrategySLIP39 &amp;recovery_strategy, const byteArray &amp;master_generator_key=byteArray())</argsstring>
         <name>genWalletMasterSeed</name>
+        <qualifiedname>zkAppUtils::zkClass::genWalletMasterSeed</qualifiedname>
         <param>
           <type>ZK_EC_KEY_TYPE</type>
           <declname>type</declname>
@@ -1719,13 +1776,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="720" column="13"/>
+        <location file="C++/zkAppUtilsClass.h" line="732" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a537a3e6d65d177082a82ef569c212947" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int zkAppUtils::zkClass::setGenSLIP39GroupInfo</definition>
         <argsstring>(int group_index, int member_count, int member_threshold)</argsstring>
         <name>setGenSLIP39GroupInfo</name>
+        <qualifiedname>zkAppUtils::zkClass::setGenSLIP39GroupInfo</qualifiedname>
         <param>
           <type>int</type>
           <declname>group_index</declname>
@@ -1739,10 +1797,12 @@
           <declname>member_threshold</declname>
         </param>
         <briefdescription>
-<para>Set the active SLIP39 group and the amount of members needed. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Set the active SLIP39 group and the amount of members needed. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function configures the active group to generate the number of shards requested for the active group. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function configures the active group to generate the number of shards requested for the active group. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>group_index</parametername>
 </parameternamelist>
@@ -1773,13 +1833,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="736" column="13"/>
+        <location file="C++/zkAppUtilsClass.h" line="749" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1af96fe0fcaa53a74e799f18ce7715fc5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int zkAppUtils::zkClass::addGenSLIP39Member</definition>
         <argsstring>(std::string passphrase, std::string *mnemonic_str)</argsstring>
         <name>addGenSLIP39Member</name>
+        <qualifiedname>zkAppUtils::zkClass::addGenSLIP39Member</qualifiedname>
         <param>
           <type>std::string</type>
           <declname>passphrase</declname>
@@ -1789,10 +1850,12 @@
           <declname>mnemonic_str</declname>
         </param>
         <briefdescription>
-<para>Generate a new SLIP39 member shard. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Generate a new SLIP39 member shard. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function generates a new SLIP39 member shard. The shard can optionally have a password attached to it. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function generates a new SLIP39 member shard. The shard can optionally have a password attached to it. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>passphrase</parametername>
 </parameternamelist>
@@ -1815,30 +1878,34 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="749" column="13"/>
+        <location file="C++/zkAppUtilsClass.h" line="763" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a00d207abd7552ce2df19244be76ea1c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int zkAppUtils::zkClass::cancelSLIP39Session</definition>
         <argsstring>()</argsstring>
         <name>cancelSLIP39Session</name>
+        <qualifiedname>zkAppUtils::zkClass::cancelSLIP39Session</qualifiedname>
         <briefdescription>
-<para>Cancels the current active SLIP39 session (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Cancels the current active SLIP39 session. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function cancels open active SLIP39 sessions. For both generation and restore SLIP39 sessions. <simplesect kind="return"><para>0 if successful on configuring the active group, less than 0 for failure. </para>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function cancels open active SLIP39 sessions. For both generation and restore SLIP39 sessions. <simplesect kind="return"><para>0 if successful on configuring the active group, less than 0 for failure. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="757" column="13"/>
+        <location file="C++/zkAppUtilsClass.h" line="772" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a9a5cd46173cdcbd018ec8672d7256110" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int zkAppUtils::zkClass::genOverSightWallet</definition>
         <argsstring>(ZK_EC_KEY_TYPE type, byteArray &amp;public_key, byteArray &amp;chain_code, std::string &amp;node_address, std::string &amp;wallet_name, std::string &amp;variant)</argsstring>
         <name>genOverSightWallet</name>
+        <qualifiedname>zkAppUtils::zkClass::genOverSightWallet</qualifiedname>
         <param>
           <type>ZK_EC_KEY_TYPE</type>
           <declname>type</declname>
@@ -1864,10 +1931,12 @@
           <declname>variant</declname>
         </param>
         <briefdescription>
-<para>Generate a oversight wallet from the last hardened node of a wallet node address (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Generate a oversight wallet from the last hardened node of a wallet node address. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function generates a new oversight wallet and are used to generate public keys in a deterministic way. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function generates a new oversight wallet and are used to generate public keys in a deterministic way. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>type</parametername>
 </parameternamelist>
@@ -1922,13 +1991,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="778" column="13"/>
+        <location file="C++/zkAppUtilsClass.h" line="794" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1aa3a204a5d059bf18f7dda922767ee4ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int zkAppUtils::zkClass::genWalletChildKey</definition>
         <argsstring>(int parent_key_slot, uint32_t index, bool is_hardened, bool return_chain_code, byteArray *chain_code)</argsstring>
         <name>genWalletChildKey</name>
+        <qualifiedname>zkAppUtils::zkClass::genWalletChildKey</qualifiedname>
         <param>
           <type>int</type>
           <declname>parent_key_slot</declname>
@@ -1950,10 +2020,12 @@
           <declname>chain_code</declname>
         </param>
         <briefdescription>
-<para>Generate child key from a parent key in a wallet (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Generate child key from a parent key in a wallet. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function generates a new child key descendent from a specified parent key in a wallet. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function generates a new child key descendent from a specified parent key in a wallet. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>parent_key_slot</parametername>
 </parameternamelist>
@@ -2009,13 +2081,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="801" column="13"/>
+        <location file="C++/zkAppUtilsClass.h" line="818" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a528b0cec60d7b2a122fc59c8665437ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int zkAppUtils::zkClass::restoreWalletMasterSeedFromMnemonic</definition>
         <argsstring>(ZK_EC_KEY_TYPE type, std::string &amp;wallet_name, byteArray &amp;master_generator_key, recoveryStrategyBIP39 &amp;recovery_strategy, std::string &amp;mnemonic_str)</argsstring>
         <name>restoreWalletMasterSeedFromMnemonic</name>
+        <qualifiedname>zkAppUtils::zkClass::restoreWalletMasterSeedFromMnemonic</qualifiedname>
         <param>
           <type>ZK_EC_KEY_TYPE</type>
           <declname>type</declname>
@@ -2037,10 +2110,12 @@
           <declname>mnemonic_str</declname>
         </param>
         <briefdescription>
-<para>Restore a master seed from a BIP39 mnemonic and a master generator key. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Restore a master seed from a BIP39 mnemonic and a master generator key. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function restores a wallet master seed from a supplied BIP39 mnemonic string and a master generator key. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function restores a wallet master seed from a supplied BIP39 mnemonic string and a master generator key. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>type</parametername>
 </parameternamelist>
@@ -2096,13 +2171,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="826" column="13"/>
+        <location file="C++/zkAppUtilsClass.h" line="844" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a276a007de13b1372718e00fefba393cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int zkAppUtils::zkClass::restoreWalletMasterSeedFromMnemonic</definition>
         <argsstring>(ZK_EC_KEY_TYPE type, std::string &amp;wallet_name, byteArray &amp;master_generator_key, recoveryStrategySLIP39 &amp;recovery_strategy)</argsstring>
         <name>restoreWalletMasterSeedFromMnemonic</name>
+        <qualifiedname>zkAppUtils::zkClass::restoreWalletMasterSeedFromMnemonic</qualifiedname>
         <param>
           <type>ZK_EC_KEY_TYPE</type>
           <declname>type</declname>
@@ -2125,13 +2201,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="832" column="13"/>
+        <location file="C++/zkAppUtilsClass.h" line="850" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a48243e710fd42c4b73c73c69d074e61b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int zkAppUtils::zkClass::addRestoreSLIP39Mnemonic</definition>
         <argsstring>(std::string passphrase, std::string mnemonic_sentence)</argsstring>
         <name>addRestoreSLIP39Mnemonic</name>
+        <qualifiedname>zkAppUtils::zkClass::addRestoreSLIP39Mnemonic</qualifiedname>
         <param>
           <type>std::string</type>
           <declname>passphrase</declname>
@@ -2141,10 +2218,12 @@
           <declname>mnemonic_sentence</declname>
         </param>
         <briefdescription>
-<para>Feed a SLIP39 shard to restore a master seed (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module). </para>
+<para>Feed a SLIP39 shard to restore a master seed. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function will feed a shard to the module until the conditions are met and a master seed is generated. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function will feed a shard to the module until the conditions are met and a master seed is generated. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>passphrase</parametername>
 </parameternamelist>
@@ -2167,13 +2246,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="846" column="13"/>
+        <location file="C++/zkAppUtilsClass.h" line="865" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a62bc7fcc98b1b71507a959451322fc31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int zkAppUtils::zkClass::getWalletNodeAddrFromKeySlot</definition>
         <argsstring>(int slot, std::string *out_node_addr, std::string *out_wallet_name=NULL)</argsstring>
         <name>getWalletNodeAddrFromKeySlot</name>
+        <qualifiedname>zkAppUtils::zkClass::getWalletNodeAddrFromKeySlot</qualifiedname>
         <param>
           <type>int</type>
           <declname>slot</declname>
@@ -2188,10 +2268,12 @@
           <defval>NULL</defval>
         </param>
         <briefdescription>
-<para>Derive the node address from a key slot number. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Derive the node address from a key slot number. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function derives a node address from an input key slot number. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function derives a node address from an input key slot number. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>slot</parametername>
 </parameternamelist>
@@ -2231,13 +2313,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="861" column="13"/>
+        <location file="C++/zkAppUtilsClass.h" line="881" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1af955d4038166b61c98da8d6a03796f1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int zkAppUtils::zkClass::getWalletKeySlotFromNodeAddr</definition>
         <argsstring>(std::string &amp;node_addr, std::string &amp;wallet_name, int master_seed_slot)</argsstring>
         <name>getWalletKeySlotFromNodeAddr</name>
+        <qualifiedname>zkAppUtils::zkClass::getWalletKeySlotFromNodeAddr</qualifiedname>
         <param>
           <type>std::string &amp;</type>
           <declname>node_addr</declname>
@@ -2251,10 +2334,12 @@
           <declname>master_seed_slot</declname>
         </param>
         <briefdescription>
-<para>Derive the slot address from a node address. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Derive the slot address from a node address. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function returns the slot number associated with a given node address. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function returns the slot number associated with a given node address. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>node_addr</parametername>
 </parameternamelist>
@@ -2294,16 +2379,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="880" column="13"/>
+        <location file="C++/zkAppUtilsClass.h" line="901" column="13"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="user-defined">
+    </sectiondef>
+    <sectiondef kind="user-defined">
       <header>LED Control</header>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a0071ea33df7fcddd04d53c1314d535c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::ledOff</definition>
         <argsstring>()</argsstring>
         <name>ledOff</name>
+        <qualifiedname>zkAppUtils::zkClass::ledOff</qualifiedname>
         <briefdescription>
 <para>Turn LED off. </para>
         </briefdescription>
@@ -2321,13 +2407,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="898" column="14"/>
+        <location file="C++/zkAppUtilsClass.h" line="919" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a8531fbc0c9c218131d8e583d5275c8c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::ledOn</definition>
         <argsstring>()</argsstring>
         <name>ledOn</name>
+        <qualifiedname>zkAppUtils::zkClass::ledOn</qualifiedname>
         <briefdescription>
 <para>Turn LED on. </para>
         </briefdescription>
@@ -2345,13 +2432,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="903" column="14"/>
+        <location file="C++/zkAppUtilsClass.h" line="924" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a40f09d223beda138c8cb94fb6104caca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::ledFlash</definition>
         <argsstring>(uint32_t on_ms, uint32_t off_ms=0, uint32_t num_flashes=0)</argsstring>
         <name>ledFlash</name>
+        <qualifiedname>zkAppUtils::zkClass::ledFlash</qualifiedname>
         <param>
           <type>uint32_t</type>
           <declname>on_ms</declname>
@@ -2408,16 +2496,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="914" column="14"/>
+        <location file="C++/zkAppUtilsClass.h" line="935" column="14"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="user-defined">
+    </sectiondef>
+    <sectiondef kind="user-defined">
       <header>Administrative</header>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1acd808f1709fcc0a8cdda9de14763ff1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::setI2CAddr</definition>
         <argsstring>(int addr)</argsstring>
         <name>setI2CAddr</name>
+        <qualifiedname>zkAppUtils::zkClass::setI2CAddr</qualifiedname>
         <param>
           <type>int</type>
           <declname>addr</declname>
@@ -2448,16 +2537,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="936" column="14"/>
+        <location file="C++/zkAppUtilsClass.h" line="957" column="14"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="user-defined">
+    </sectiondef>
+    <sectiondef kind="user-defined">
       <header>Time</header>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1ac31d4badb6328045e8cab672e3394018" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
         <definition>uint32_t zkAppUtils::zkClass::getTime</definition>
         <argsstring>(bool precise_time=false)</argsstring>
         <name>getTime</name>
+        <qualifiedname>zkAppUtils::zkClass::getTime</qualifiedname>
         <param>
           <type>bool</type>
           <declname>precise_time</declname>
@@ -2491,16 +2581,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="957" column="18"/>
+        <location file="C++/zkAppUtilsClass.h" line="978" column="18"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="user-defined">
+    </sectiondef>
+    <sectiondef kind="user-defined">
       <header>Accelerometer</header>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1ac9d8a6cc388eaf2b37099929da776a59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::setTapSensitivity</definition>
         <argsstring>(float pct, ZK_ACCEL_AXIS_TYPE axis=ZK_ACCEL_AXIS_ALL)</argsstring>
         <name>setTapSensitivity</name>
+        <qualifiedname>zkAppUtils::zkClass::setTapSensitivity</qualifiedname>
         <param>
           <type>float</type>
           <declname>pct</declname>
@@ -2544,13 +2635,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="976" column="14"/>
+        <location file="C++/zkAppUtilsClass.h" line="997" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1ab00515782c453df5103905b5058fc21f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::waitForTap</definition>
         <argsstring>(uint32_t timeout_ms)</argsstring>
         <name>waitForTap</name>
+        <qualifiedname>zkAppUtils::zkClass::waitForTap</qualifiedname>
         <param>
           <type>uint32_t</type>
           <declname>timeout_ms</declname>
@@ -2581,13 +2673,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="989" column="14"/>
+        <location file="C++/zkAppUtilsClass.h" line="1010" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1ae9c5c2c67b60cea02fd13e5f545158a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::getAccelerometerData</definition>
         <argsstring>(accelData &amp;accel_data)</argsstring>
         <name>getAccelerometerData</name>
+        <qualifiedname>zkAppUtils::zkClass::getAccelerometerData</qualifiedname>
         <param>
           <type><ref refid="structzk_app_utils_1_1accel_data" kindref="compound">accelData</ref> &amp;</type>
           <declname>accel_data</declname>
@@ -2618,16 +2711,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="1001" column="14"/>
+        <location file="C++/zkAppUtilsClass.h" line="1022" column="14"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="user-defined">
+    </sectiondef>
+    <sectiondef kind="user-defined">
       <header>Binding Management</header>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a88a59ed6eca3f5bd83895d2fabac0000" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::lockBinding</definition>
         <argsstring>()</argsstring>
         <name>lockBinding</name>
+        <qualifiedname>zkAppUtils::zkClass::lockBinding</qualifiedname>
         <briefdescription>
 <para>Set soft binding lock. </para>
         </briefdescription>
@@ -2645,13 +2739,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="1017" column="14"/>
+        <location file="C++/zkAppUtilsClass.h" line="1038" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a984102f5f0bfdd298db1fb67b1e2111e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::getCurrentBindingInfo</definition>
         <argsstring>(bool &amp;binding_is_locked, bool &amp;is_bound)</argsstring>
         <name>getCurrentBindingInfo</name>
+        <qualifiedname>zkAppUtils::zkClass::getCurrentBindingInfo</qualifiedname>
         <param>
           <type>bool &amp;</type>
           <declname>binding_is_locked</declname>
@@ -2686,16 +2781,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="1030" column="14"/>
+        <location file="C++/zkAppUtilsClass.h" line="1051" column="14"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="user-defined">
+    </sectiondef>
+    <sectiondef kind="user-defined">
       <header>Perimeter Detect</header>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a2bf03172ebb08f4b8aef9d2541545cdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::setPerimeterEventAction</definition>
         <argsstring>(int channel, uint32_t action_flags)</argsstring>
         <name>setPerimeterEventAction</name>
+        <qualifiedname>zkAppUtils::zkClass::setPerimeterEventAction</qualifiedname>
         <param>
           <type>int</type>
           <declname>channel</declname>
@@ -2746,22 +2842,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="1054" column="14"/>
+        <location file="C++/zkAppUtilsClass.h" line="1075" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a435c6ceebccb97bcaf8316a853b0f220" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::setDigitalPerimeterDetectLPPeriod</definition>
         <argsstring>(int lp_period)</argsstring>
         <name>setDigitalPerimeterDetectLPPeriod</name>
+        <qualifiedname>zkAppUtils::zkClass::setDigitalPerimeterDetectLPPeriod</qualifiedname>
         <param>
           <type>int</type>
           <declname>lp_period</declname>
         </param>
         <briefdescription>
-<para>Set the low power period (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module). </para>
+<para>Set the low power period. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function sets low power period on the digital perimeter detect <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function sets low power period on the digital perimeter detect <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>lp_period</parametername>
 </parameternamelist>
@@ -2785,22 +2884,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="1062" column="6"/>
+        <location file="C++/zkAppUtilsClass.h" line="1084" column="6"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1aa78c0fb85fefdf67ba5292024718bdcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::setDigitalPerimeterDetectLPMaxBits</definition>
         <argsstring>(int max_num_bits)</argsstring>
         <name>setDigitalPerimeterDetectLPMaxBits</name>
+        <qualifiedname>zkAppUtils::zkClass::setDigitalPerimeterDetectLPMaxBits</qualifiedname>
         <param>
           <type>int</type>
           <declname>max_num_bits</declname>
         </param>
         <briefdescription>
-<para>Set the low power max number of bits (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module). </para>
+<para>Set the low power max number of bits. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function sets low power max number of bits on the digital perimeter detect <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function sets low power max number of bits on the digital perimeter detect <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>max_num_bits</parametername>
 </parameternamelist>
@@ -2824,13 +2926,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="1070" column="6"/>
+        <location file="C++/zkAppUtilsClass.h" line="1093" column="6"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a21ffee7105f368c8f72d6fd36de577f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::setDigitalPerimeterDetectDelays</definition>
         <argsstring>(int min_delay_ns, int max_delay_ns)</argsstring>
         <name>setDigitalPerimeterDetectDelays</name>
+        <qualifiedname>zkAppUtils::zkClass::setDigitalPerimeterDetectDelays</qualifiedname>
         <param>
           <type>int</type>
           <declname>min_delay_ns</declname>
@@ -2840,10 +2943,12 @@
           <declname>max_delay_ns</declname>
         </param>
         <briefdescription>
-<para>Set the delays (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module). </para>
+<para>Set the delays. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function sets delays on the digital perimeter detect <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function sets delays on the digital perimeter detect <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>min_delay_ns</parametername>
 </parameternamelist>
@@ -2875,13 +2980,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="1081" column="6"/>
+        <location file="C++/zkAppUtilsClass.h" line="1105" column="6"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a0b2fcd99b282a30b779560375eb6e54f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::waitForPerimeterEvent</definition>
         <argsstring>(uint32_t timeout_ms)</argsstring>
         <name>waitForPerimeterEvent</name>
+        <qualifiedname>zkAppUtils::zkClass::waitForPerimeterEvent</qualifiedname>
         <param>
           <type>uint32_t</type>
           <declname>timeout_ms</declname>
@@ -2912,13 +3018,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="1097" column="14"/>
+        <location file="C++/zkAppUtilsClass.h" line="1121" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a57aa4d041fe70d3d2728b4de44d4e6eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::getPerimeterDetectInfo</definition>
         <argsstring>(uint32_t **timestamp_sec, int &amp;num_timestamps)</argsstring>
         <name>getPerimeterDetectInfo</name>
+        <qualifiedname>zkAppUtils::zkClass::getPerimeterDetectInfo</qualifiedname>
         <param>
           <type>uint32_t **</type>
           <declname>timestamp_sec</declname>
@@ -2961,13 +3068,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="1111" column="14"/>
+        <location file="C++/zkAppUtilsClass.h" line="1135" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1af94e6c0e537f18e320c65728764e5ca8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::clearPerimeterDetectEvents</definition>
         <argsstring>()</argsstring>
         <name>clearPerimeterDetectEvents</name>
+        <qualifiedname>zkAppUtils::zkClass::clearPerimeterDetectEvents</qualifiedname>
         <briefdescription>
 <para>Clear perimeter detect info. </para>
         </briefdescription>
@@ -2985,13 +3093,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="1118" column="14"/>
+        <location file="C++/zkAppUtilsClass.h" line="1142" column="14"/>
       </memberdef>
-      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a732b084f85070c00ef2423f76aba29e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1acf90dc47cc0664a1501d3c20a5d5ecad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string *</type>
-        <definition>std::string* zkAppUtils::zkClass::getModelNumberString</definition>
+        <definition>std::string * zkAppUtils::zkClass::getModelNumberString</definition>
         <argsstring>()</argsstring>
         <name>getModelNumberString</name>
+        <qualifiedname>zkAppUtils::zkClass::getModelNumberString</qualifiedname>
         <briefdescription>
 <para>Get Zymkey model number. </para>
         </briefdescription>
@@ -3011,13 +3120,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="1124" column="13"/>
+        <location file="C++/zkAppUtilsClass.h" line="1148" column="13"/>
       </memberdef>
-      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a00d5031efc2b7040db08da5e86e85e2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a40b9a6c8fffc15e9aaecf2ae35547238" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string *</type>
-        <definition>std::string* zkAppUtils::zkClass::getFirmwareVersionString</definition>
+        <definition>std::string * zkAppUtils::zkClass::getFirmwareVersionString</definition>
         <argsstring>()</argsstring>
         <name>getFirmwareVersionString</name>
+        <qualifiedname>zkAppUtils::zkClass::getFirmwareVersionString</qualifiedname>
         <briefdescription>
 <para>Get Zymkey firmware version. </para>
         </briefdescription>
@@ -3037,13 +3147,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="1130" column="13"/>
+        <location file="C++/zkAppUtilsClass.h" line="1154" column="13"/>
       </memberdef>
-      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1ab545df4772a4c23fae3e970a9e185a38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a544950c02c4aa8580beffc8c8c4a3d6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string *</type>
-        <definition>std::string* zkAppUtils::zkClass::getSerialNumberString</definition>
+        <definition>std::string * zkAppUtils::zkClass::getSerialNumberString</definition>
         <argsstring>()</argsstring>
         <name>getSerialNumberString</name>
+        <qualifiedname>zkAppUtils::zkClass::getSerialNumberString</qualifiedname>
         <briefdescription>
 <para>Get Zymkey serial number. </para>
         </briefdescription>
@@ -3063,21 +3174,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="1136" column="13"/>
+        <location file="C++/zkAppUtilsClass.h" line="1160" column="13"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="user-defined">
+    </sectiondef>
+    <sectiondef kind="user-defined">
       <header>Module Info</header>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a6956a4bedbe0baee05318807605dc674" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
         <definition>float zkAppUtils::zkClass::getCPUTemp</definition>
         <argsstring>()</argsstring>
         <name>getCPUTemp</name>
+        <qualifiedname>zkAppUtils::zkClass::getCPUTemp</qualifiedname>
         <briefdescription>
-<para>Get the CPU Temp. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Get the CPU Temp. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function gets the current HSM CPU temp. <simplesect kind="return"><para>The CPU temp as a float. </para>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function gets the current HSM CPU temp. <simplesect kind="return"><para>The CPU temp as a float. </para>
 </simplesect>
 <parameterlist kind="exception"><parameteritem>
 <parameternamelist>
@@ -3092,13 +3206,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="1148" column="10"/>
+        <location file="C++/zkAppUtilsClass.h" line="1173" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a65b659edb8e402ab00b90177599220d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
         <definition>float zkAppUtils::zkClass::getAUXTemp</definition>
         <argsstring>(int index=0)</argsstring>
         <name>getAUXTemp</name>
+        <qualifiedname>zkAppUtils::zkClass::getAUXTemp</qualifiedname>
         <param>
           <type>int</type>
           <declname>index</declname>
@@ -3123,18 +3238,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="1155" column="10"/>
+        <location file="C++/zkAppUtilsClass.h" line="1180" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a2a9214bf2810417108ea300ff79b6d46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
         <definition>float zkAppUtils::zkClass::getRTCDrift</definition>
         <argsstring>()</argsstring>
         <name>getRTCDrift</name>
+        <qualifiedname>zkAppUtils::zkClass::getRTCDrift</qualifiedname>
         <briefdescription>
-<para>Get the RTC drift. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Get the RTC drift. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function gets the current RTC drift. <simplesect kind="return"><para>The RTC drift as a float. </para>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function gets the current RTC drift. <simplesect kind="return"><para>The RTC drift as a float. </para>
 </simplesect>
 <parameterlist kind="exception"><parameteritem>
 <parameternamelist>
@@ -3149,18 +3267,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="1161" column="10"/>
+        <location file="C++/zkAppUtilsClass.h" line="1187" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1acaf94e9560d986f54750718ce6f12402" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
         <definition>float zkAppUtils::zkClass::getBatteryVoltage</definition>
         <argsstring>()</argsstring>
         <name>getBatteryVoltage</name>
+        <qualifiedname>zkAppUtils::zkClass::getBatteryVoltage</qualifiedname>
         <briefdescription>
-<para>Get the battery voltage(Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module). </para>
+<para>Get the battery voltage. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function gets the current battery voltage <simplesect kind="return"><para>the battery voltage as a float. </para>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function gets the current battery voltage <simplesect kind="return"><para>the battery voltage as a float. </para>
 </simplesect>
 <parameterlist kind="exception"><parameteritem>
 <parameternamelist>
@@ -3175,25 +3296,28 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="1167" column="7"/>
+        <location file="C++/zkAppUtilsClass.h" line="1194" column="7"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="user-defined">
+    </sectiondef>
+    <sectiondef kind="user-defined">
       <header>Battery Voltage Monitor</header>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a374940c6de51d1a2bf9259d0542e0b0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::setBatteryVoltageAction</definition>
         <argsstring>(ZK_THRESHOLD_ACTION_TYPE action)</argsstring>
         <name>setBatteryVoltageAction</name>
+        <qualifiedname>zkAppUtils::zkClass::setBatteryVoltageAction</qualifiedname>
         <param>
           <type>ZK_THRESHOLD_ACTION_TYPE</type>
           <declname>action</declname>
         </param>
         <briefdescription>
-<para>Set battery voltage threshold action. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Set battery voltage threshold action. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function specifies the action to take when the battery voltage falls below the threshold set by zkSetBatteryVoltageThreshold. If this function is never called, do nothing is default. There are three actions:<itemizedlist>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function specifies the action to take when the battery voltage falls below the threshold set by zkSetBatteryVoltageThreshold. If this function is never called, do nothing is default. There are three actions:<itemizedlist>
 <listitem><para>Do nothing</para>
 </listitem><listitem><para>Go to sleep until battery is replaced</para>
 </listitem><listitem><para>Self-destruct <parameterlist kind="param"><parameteritem>
@@ -3225,22 +3349,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="1191" column="8"/>
+        <location file="C++/zkAppUtilsClass.h" line="1219" column="8"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1af48b1f11765f94cc8f707101f197eeb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::setBatteryVoltageThreshold</definition>
         <argsstring>(float threshold)</argsstring>
         <name>setBatteryVoltageThreshold</name>
+        <qualifiedname>zkAppUtils::zkClass::setBatteryVoltageThreshold</qualifiedname>
         <param>
           <type>float</type>
           <declname>threshold</declname>
         </param>
         <briefdescription>
-<para>Sets the battery voltage threshold. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Sets the battery voltage threshold. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function sets the threshold at which if the battery voltage falls bellow, the action set by zkSetBatteryVoltageAction will be carried out. The recommended threshold is 2.3V is assumed by default. Threshold must be below 2.5V. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function sets the threshold at which if the battery voltage falls bellow, the action set by zkSetBatteryVoltageAction will be carried out. The recommended threshold is 2.3V is assumed by default. Threshold must be below 2.5V. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>threshold</parametername>
 </parameternamelist>
@@ -3262,25 +3389,28 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="1204" column="8"/>
+        <location file="C++/zkAppUtilsClass.h" line="1233" column="8"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="user-defined">
+    </sectiondef>
+    <sectiondef kind="user-defined">
       <header>CPU Temperature Monitor</header>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1ada7ce931928fedde9cec5c15cb1d1d91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::setCPUTempAction</definition>
         <argsstring>(ZK_THRESHOLD_ACTION_TYPE action)</argsstring>
         <name>setCPUTempAction</name>
+        <qualifiedname>zkAppUtils::zkClass::setCPUTempAction</qualifiedname>
         <param>
           <type>ZK_THRESHOLD_ACTION_TYPE</type>
           <declname>action</declname>
         </param>
         <briefdescription>
-<para>Set HSM CPU temperature threshold action. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Set HSM CPU temperature threshold action. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function specifies the action to take when the HSM CPU temperature falls below the threshold set by zkSetCPULowTempThreshold, or rises above the threshold set by zkSetCPUHighTempThreshold. There are two actions to apply:<itemizedlist>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function specifies the action to take when the HSM CPU temperature falls below the threshold set by zkSetCPULowTempThreshold, or rises above the threshold set by zkSetCPUHighTempThreshold. There are two actions to apply:<itemizedlist>
 <listitem><para>Do nothing</para>
 </listitem><listitem><para>Self-destruct <parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -3310,22 +3440,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="1228" column="8"/>
+        <location file="C++/zkAppUtilsClass.h" line="1258" column="8"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1aee3dcb54cfa647f1f51b81d539ceb1d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::setCPULowTempThreshold</definition>
         <argsstring>(float threshold)</argsstring>
         <name>setCPULowTempThreshold</name>
+        <qualifiedname>zkAppUtils::zkClass::setCPULowTempThreshold</qualifiedname>
         <param>
           <type>float</type>
           <declname>threshold</declname>
         </param>
         <briefdescription>
-<para>Sets the HSM CPU low temperature threshold. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Sets the HSM CPU low temperature threshold. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function sets the threshold at which if the on-board HSM CPU&apos;s tempreature falls below, the action set by zkSetCPUTempAction will be carried out. WARNING: You can lock yourself out in dev mode if you set a threshold above the CPU&apos;s ambient temperature. The recommended setting is no more than 20C. If no threshold is set, -10 degrees Celsius is set as default. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function sets the threshold at which if the on-board HSM CPU&apos;s tempreature falls below, the action set by zkSetCPUTempAction will be carried out. WARNING: You can lock yourself out in dev mode if you set a threshold above the CPU&apos;s ambient temperature. The recommended setting is no more than 20C. If no threshold is set, -10 degrees Celsius is set as default. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>threshold</parametername>
 </parameternamelist>
@@ -3347,22 +3480,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="1244" column="8"/>
+        <location file="C++/zkAppUtilsClass.h" line="1275" column="8"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a7ca53d9e747c76a88be85aad6ed60e3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::setCPUHighTempThreshold</definition>
         <argsstring>(float threshold)</argsstring>
         <name>setCPUHighTempThreshold</name>
+        <qualifiedname>zkAppUtils::zkClass::setCPUHighTempThreshold</qualifiedname>
         <param>
           <type>float</type>
           <declname>threshold</declname>
         </param>
         <briefdescription>
-<para>Sets the HSM CPU high temperature threshold. (Supported Devices: ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module) </para>
+<para>Sets the HSM CPU high temperature threshold. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function sets the threshold at which if the on-board HSM CPU&apos;s tempreature rises above, the action set by zkSetCPUTempAction will be carried out. WARNING: You can lock yourself out in dev mode if you set a threshold below the CPU&apos;s ambient temperature. The recommended setting is no less than 40C. If no threshold is set, 65 degrees celsius is set as default. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>ZYMKEY5, HSM60, HSM64, HSM6, Secure Compute Module</para>
+</simplesect>
+This function sets the threshold at which if the on-board HSM CPU&apos;s tempreature rises above, the action set by zkSetCPUTempAction will be carried out. WARNING: You can lock yourself out in dev mode if you set a threshold below the CPU&apos;s ambient temperature. The recommended setting is no less than 40C. If no threshold is set, 65 degrees celsius is set as default. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>threshold</parametername>
 </parameternamelist>
@@ -3377,22 +3513,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="1260" column="8"/>
+        <location file="C++/zkAppUtilsClass.h" line="1292" column="8"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a3f0de0eee83e1ca06453bc44eaaa3e7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::setSupervisedBootPolicy</definition>
         <argsstring>(int policy_id)</argsstring>
         <name>setSupervisedBootPolicy</name>
+        <qualifiedname>zkAppUtils::zkClass::setSupervisedBootPolicy</qualifiedname>
         <param>
           <type>int</type>
           <declname>policy_id</declname>
         </param>
         <briefdescription>
-<para>Sets the Supervised boot policy. (Supported Devices: Secure Compute Module) </para>
+<para>Sets the Supervised boot policy. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function specifies the action to take when Supervised boot event triggers based on a file change. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>Secure Compute Module</para>
+</simplesect>
+This function specifies the action to take when Supervised boot event triggers based on a file change. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>policy_id</parametername>
 </parameternamelist>
@@ -3412,13 +3551,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="1273" column="8"/>
+        <location file="C++/zkAppUtilsClass.h" line="1306" column="8"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a5eeea590e4d73911e87334a313590f9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::addOrUpdateSupervisedBootFile</definition>
         <argsstring>(std::string file_path, int slot=15)</argsstring>
         <name>addOrUpdateSupervisedBootFile</name>
+        <qualifiedname>zkAppUtils::zkClass::addOrUpdateSupervisedBootFile</qualifiedname>
         <param>
           <type>std::string</type>
           <declname>file_path</declname>
@@ -3429,10 +3569,12 @@
           <defval>15</defval>
         </param>
         <briefdescription>
-<para>Update file manifest for Supervised boot to check. (Supported Devices: Secure Compute Module) </para>
+<para>Update file manifest for Supervised boot to check. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function adds or updates files to be checked by Supervised boot. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>Secure Compute Module</para>
+</simplesect>
+This function adds or updates files to be checked by Supervised boot. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>file_path</parametername>
 </parameternamelist>
@@ -3455,22 +3597,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="1284" column="8"/>
+        <location file="C++/zkAppUtilsClass.h" line="1318" column="8"/>
       </memberdef>
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a9115df2b0c1feae8708efad9481a2983" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::removeSupervisedBootFile</definition>
         <argsstring>(std::string file_path)</argsstring>
         <name>removeSupervisedBootFile</name>
+        <qualifiedname>zkAppUtils::zkClass::removeSupervisedBootFile</qualifiedname>
         <param>
           <type>std::string</type>
           <declname>file_path</declname>
         </param>
         <briefdescription>
-<para>Remove a file from file manifest for Supervised boot to check. (Supported Devices: Secure Compute Module) </para>
+<para>Remove a file from file manifest for Supervised boot to check. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function removes a file to be checked by Supervised boot. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>Secure Compute Module</para>
+</simplesect>
+This function removes a file to be checked by Supervised boot. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>file_path</parametername>
 </parameternamelist>
@@ -3485,18 +3630,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="1293" column="8"/>
+        <location file="C++/zkAppUtilsClass.h" line="1328" column="8"/>
       </memberdef>
-      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1aa45bb9f777a4dd11f4bb35a5a5fd6d18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a27fae03f85c47983ced41d8834ebf189" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string *</type>
-        <definition>std::string* zkAppUtils::zkClass::getSupervisedBootFileManifest</definition>
+        <definition>std::string * zkAppUtils::zkClass::getSupervisedBootFileManifest</definition>
         <argsstring>()</argsstring>
         <name>getSupervisedBootFileManifest</name>
+        <qualifiedname>zkAppUtils::zkClass::getSupervisedBootFileManifest</qualifiedname>
         <briefdescription>
-<para>Get file manifest for Supervised boot to check. (Supported Devices: Secure Compute Module) </para>
+<para>Get file manifest for Supervised boot to check. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function gets the list of files to be checked by Supervised boot. <parameterlist kind="param"><parameteritem>
+<para><simplesect kind="par"><title>Supported Devices:</title><para>Secure Compute Module</para>
+</simplesect>
+This function gets the list of files to be checked by Supervised boot. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>manifest</parametername>
 </parameternamelist>
@@ -3511,30 +3659,32 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="1302" column="15"/>
+        <location file="C++/zkAppUtilsClass.h" line="1338" column="15"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="private-attrib">
+    </sectiondef>
+    <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classzk_app_utils_1_1zk_class_1ad031ca546148ceb59ec648fab2be6722" prot="private" static="no" mutable="no">
         <type>zkCTX</type>
         <definition>zkCTX zkAppUtils::zkClass::zkContext</definition>
         <argsstring></argsstring>
         <name>zkContext</name>
+        <qualifiedname>zkAppUtils::zkClass::zkContext</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C++/zkAppUtilsClass.h" line="1310" column="11" bodyfile="C++/zkAppUtilsClass.h" bodystart="1310" bodyend="-1"/>
+        <location file="C++/zkAppUtilsClass.h" line="1346" column="11" bodyfile="C++/zkAppUtilsClass.h" bodystart="1346" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
+    </sectiondef>
+    <sectiondef kind="public-func">
       <memberdef kind="function" id="classzk_app_utils_1_1zk_class_1a70126fc94e512ff0562013c9717b9b5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void zkAppUtils::zkClass::enableSelfRestart</definition>
         <argsstring>(bool enabled, int waitSec, int maxNumRestart)</argsstring>
         <name>enableSelfRestart</name>
+        <qualifiedname>zkAppUtils::zkClass::enableSelfRestart</qualifiedname>
         <param>
           <type>bool</type>
           <declname>enabled</declname>
@@ -3591,13 +3741,13 @@
         </inbodydescription>
         <location file="C++/zkAppUtilsClass.h" line="239" column="6"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
 <para>The main class. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C++/zkAppUtilsClass.h" line="212" column="1" bodyfile="C++/zkAppUtilsClass.h" bodystart="213" bodyend="1314"/>
+    <location file="C++/zkAppUtilsClass.h" line="212" column="1" bodyfile="C++/zkAppUtilsClass.h" bodystart="213" bodyend="1350"/>
     <listofallmembers>
       <member refid="classzk_app_utils_1_1zk_class_1af96fe0fcaa53a74e799f18ce7715fc5e" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>addGenSLIP39Member</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1a5eeea590e4d73911e87334a313590f9b" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>addOrUpdateSupervisedBootFile</name></member>
@@ -3606,15 +3756,15 @@
       <member refid="classzk_app_utils_1_1zk_class_1af94e6c0e537f18e320c65728764e5ca8" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>clearPerimeterDetectEvents</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1a9a4a7c019b82d8b1760ae9f743de944d" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>createRandDataFile</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1ab730469e9e5ffb217455a775960732d1" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>disablePubKeyExport</name></member>
-      <member refid="classzk_app_utils_1_1zk_class_1ac969e9bb26200c34d9b80b6b3287fc4f" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>doECDHAndKDF</name></member>
-      <member refid="classzk_app_utils_1_1zk_class_1ad76f1a1781c845623194d7d3e420796f" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>doECDHAndKDFWithIntPeerPubkey</name></member>
-      <member refid="classzk_app_utils_1_1zk_class_1a094c61c54bcc4c064e961a75ad92c04b" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>doRawECDH</name></member>
-      <member refid="classzk_app_utils_1_1zk_class_1ac4c9c958cb219943bf590debfff42d8e" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>doRawECDHWithIntPeerPubkey</name></member>
+      <member refid="classzk_app_utils_1_1zk_class_1a346e58ecb0fd1947bb11af399c8c0188" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>doECDHAndKDF</name></member>
+      <member refid="classzk_app_utils_1_1zk_class_1a2db20d758c7c1872426cbf8cd4501d39" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>doECDHAndKDFWithIntPeerPubkey</name></member>
+      <member refid="classzk_app_utils_1_1zk_class_1a92667fd60df92fa92b31fe8cdb3c08f2" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>doRawECDH</name></member>
+      <member refid="classzk_app_utils_1_1zk_class_1a99c291436911e35c8ae2b1782a1b7e8d" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>doRawECDHWithIntPeerPubkey</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1a70126fc94e512ff0562013c9717b9b5e" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>enableSelfRestart</name></member>
-      <member refid="classzk_app_utils_1_1zk_class_1ae13277c55222907a21537b790279d214" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>exportPubKey</name></member>
+      <member refid="classzk_app_utils_1_1zk_class_1abb635d3e522ef15b4f675b1b1a05678e" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>exportPubKey</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1a1bdc2d2f9d479a28af6de6cd7889020b" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>exportPubKey2File</name></member>
-      <member refid="classzk_app_utils_1_1zk_class_1aa4da8d53be65803af718a336407ea6d2" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>genECDSASigFromDigest</name></member>
-      <member refid="classzk_app_utils_1_1zk_class_1a11af5c32dc4d0a87b072e7b056a550e0" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>genECDSASigFromDigest</name></member>
+      <member refid="classzk_app_utils_1_1zk_class_1ab007adf3d85c5a488dd28b6cf182d5b6" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>genECDSASigFromDigest</name></member>
+      <member refid="classzk_app_utils_1_1zk_class_1ab1d956eac6affc32b82eb27bc4ae9b57" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>genECDSASigFromDigest</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1ada05198c035f694fda303a8b7e30b4b5" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>genEphemeralKeyPair</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1afa4595edba19c2c98109763898dbfc9a" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>genKeyPair</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1a9a5cd46173cdcbd018ec8672d7256110" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>genOverSightWallet</name></member>
@@ -3623,19 +3773,19 @@
       <member refid="classzk_app_utils_1_1zk_class_1acb12f4443c3d7b0fdc81f9cb18f78381" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>genWalletMasterSeed</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1add63278d1061e559bfc2509e2cf0febc" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>genWalletMasterSeed</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1ae9c5c2c67b60cea02fd13e5f545158a6" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>getAccelerometerData</name></member>
-      <member refid="classzk_app_utils_1_1zk_class_1a636729b4700e21c3392bd75aac2d8873" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>getAllocSlotsList</name></member>
+      <member refid="classzk_app_utils_1_1zk_class_1adc53f82db51aafe1f5d6ec205cc55987" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>getAllocSlotsList</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1a65b659edb8e402ab00b90177599220d5" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>getAUXTemp</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1acaf94e9560d986f54750718ce6f12402" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>getBatteryVoltage</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1a6956a4bedbe0baee05318807605dc674" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>getCPUTemp</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1a984102f5f0bfdd298db1fb67b1e2111e" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>getCurrentBindingInfo</name></member>
-      <member refid="classzk_app_utils_1_1zk_class_1a545db81233e96730f9d33af01b6983b4" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>getECDSAPubKey</name></member>
-      <member refid="classzk_app_utils_1_1zk_class_1a00d5031efc2b7040db08da5e86e85e2c" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>getFirmwareVersionString</name></member>
-      <member refid="classzk_app_utils_1_1zk_class_1a732b084f85070c00ef2423f76aba29e2" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>getModelNumberString</name></member>
+      <member refid="classzk_app_utils_1_1zk_class_1a43a830a3e3a51d9e5b3b09ffe037f858" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>getECDSAPubKey</name></member>
+      <member refid="classzk_app_utils_1_1zk_class_1a40b9a6c8fffc15e9aaecf2ae35547238" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>getFirmwareVersionString</name></member>
+      <member refid="classzk_app_utils_1_1zk_class_1acf90dc47cc0664a1501d3c20a5d5ecad" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>getModelNumberString</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1a57aa4d041fe70d3d2728b4de44d4e6eb" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>getPerimeterDetectInfo</name></member>
-      <member refid="classzk_app_utils_1_1zk_class_1ae6c1bc3ff39beea99f72e7740c528313" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>getRandBytes</name></member>
+      <member refid="classzk_app_utils_1_1zk_class_1a710adb889c21dabb89f61f76a81f6446" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>getRandBytes</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1a2a9214bf2810417108ea300ff79b6d46" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>getRTCDrift</name></member>
-      <member refid="classzk_app_utils_1_1zk_class_1ab545df4772a4c23fae3e970a9e185a38" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>getSerialNumberString</name></member>
-      <member refid="classzk_app_utils_1_1zk_class_1aa45bb9f777a4dd11f4bb35a5a5fd6d18" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>getSupervisedBootFileManifest</name></member>
+      <member refid="classzk_app_utils_1_1zk_class_1a544950c02c4aa8580beffc8c8c4a3d6c" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>getSerialNumberString</name></member>
+      <member refid="classzk_app_utils_1_1zk_class_1a27fae03f85c47983ced41d8834ebf189" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>getSupervisedBootFileManifest</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1ac31d4badb6328045e8cab672e3394018" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>getTime</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1af955d4038166b61c98da8d6a03796f1c" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>getWalletKeySlotFromNodeAddr</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1a62bc7fcc98b1b71507a959451322fc31" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>getWalletNodeAddrFromKeySlot</name></member>
@@ -3646,8 +3796,8 @@
       <member refid="classzk_app_utils_1_1zk_class_1a88a59ed6eca3f5bd83895d2fabac0000" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>lockBinding</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1a65aee74e18121f104b8420822013452e" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>lockData</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1a12a0b56f2d9957e4f6f66964b1dc88c8" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>lockData</name></member>
-      <member refid="classzk_app_utils_1_1zk_class_1a749ea09595c364126d54f99022d4ceb6" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>lockData</name></member>
-      <member refid="classzk_app_utils_1_1zk_class_1a5302506bc51be472e44f3f21b7223a2e" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>lockData</name></member>
+      <member refid="classzk_app_utils_1_1zk_class_1ac57f7a6a758248406bd2ad92e8b1d3ec" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>lockData</name></member>
+      <member refid="classzk_app_utils_1_1zk_class_1aa6a70fd15ea113d66ee65f239bd06600" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>lockData</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1a62f486dc7c3502fd49c43f628a48fd62" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>removeKey</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1a9115df2b0c1feae8708efad9481a2983" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>removeSupervisedBootFile</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1a528b0cec60d7b2a122fc59c8665437ad" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>restoreWalletMasterSeedFromMnemonic</name></member>
@@ -3669,8 +3819,8 @@
       <member refid="classzk_app_utils_1_1zk_class_1aa95d4e59e180197bf8e847b4d52d5001" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>storeForeignPubKey</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1a0ecbe6c828556f8f762fb74e628f13af" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>unlockData</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1a40befc1bfc64e6a06e2169c8a102cd2f" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>unlockData</name></member>
-      <member refid="classzk_app_utils_1_1zk_class_1ada1f322ad059f421c48af150a5a0beec" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>unlockData</name></member>
-      <member refid="classzk_app_utils_1_1zk_class_1a0c33653e5fe062d0784f64e4ac07ce08" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>unlockData</name></member>
+      <member refid="classzk_app_utils_1_1zk_class_1a4acdb8f7a6a6f97285ede36ba1d34fe3" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>unlockData</name></member>
+      <member refid="classzk_app_utils_1_1zk_class_1a6c9c6974bd00b81de17ab6e316c509f8" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>unlockData</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1a5046d6ddc2fb67c7c352df859c84089d" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>verifyECDSASigFromDigest</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1a0b2fcd99b282a30b779560375eb6e54f" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>waitForPerimeterEvent</name></member>
       <member refid="classzk_app_utils_1_1zk_class_1ab00515782c453df5103905b5058fc21f" prot="public" virt="non-virtual"><scope>zkAppUtils::zkClass</scope><name>waitForTap</name></member>
