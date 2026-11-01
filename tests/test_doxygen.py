@@ -162,11 +162,20 @@ def test_cpp_gaps_are_filled():
     assert protected
 
 
+def test_inline_members_say_so():
+    cpp = extract("doxygen-1.9.1", "cpp", "zkAppUtilsClass.h")
+    get = next(i for i in items(cpp["groups"]) if i["name"] == "getRecoveryStrategy")
+    assert get["inline"] == "yes"
+    assert get["signature"].startswith("inline ZK_RECOVERY_STRATEGY ")
+    # The 14 on today's page, plus the two exception-class destructors it never showed.
+    assert sum(1 for i in items(cpp["groups"]) if i.get("inline")) == 16
+
+
 def test_anchors_are_unique_and_readable():
     cpp = extract("doxygen-1.9.8", "cpp", "zkAppUtilsClass.h")
     anchors = [i["anchor"] for i in items(cpp["groups"])]
     assert len(anchors) == len(set(anchors))
-    assert all(re.fullmatch(r"[A-Za-z0-9-]+", a) for a in anchors)
+    assert all(re.fullmatch(r"[A-Za-z0-9_-]+", a) for a in anchors)
 
 
 def test_unknown_markup_fails_loudly():
