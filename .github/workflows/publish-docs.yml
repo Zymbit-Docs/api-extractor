@@ -138,6 +138,20 @@ jobs:
     env:
       BRANCH: api-update/${{ inputs.repo-name }}
     steps:
+      - name: Check the App credentials were passed
+        env:
+          CLIENT_ID: ${{ inputs.docs-app-client-id }}
+          HAS_KEY: ${{ secrets.docs-app-private-key != '' }}
+        run: |
+          if [[ -z "$CLIENT_ID" ]]; then
+            echo "::error::docs-app-client-id is empty. Store the App's client ID as the repository *variable* DOCS_APP_CLIENT_ID (Settings > Secrets and variables > Actions > Variables); a secret cannot be passed as an input."
+            exit 1
+          fi
+          if [[ "$HAS_KEY" != "true" ]]; then
+            echo "::error::The secret docs-app-private-key is empty. Store the App's private key as the repository secret DOCS_APP_PRIVATE_KEY."
+            exit 1
+          fi
+
       # A token for Zymbit-Docs/docs only, limited to pushing a branch and
       # opening a PR. It expires within the hour and is revoked when the job ends.
       - name: Get a token for the docs repo
@@ -164,9 +178,25 @@ jobs:
           name: api-docs
           path: out
 
+      # Commits are authored by the App's bot account, so they show its name and
+      # avatar, matching the PR it opens.
+      - name: Look up the App's bot account
+        id: bot
+        env:
+          GH_TOKEN: ${{ steps.token.outputs.token }}
+          APP_SLUG: ${{ steps.token.outputs.app-slug }}
+        run: |
+          id=$(gh api "/users/${APP_SLUG}[bot]" --jq .id)
+          echo "name=${APP_SLUG}[bot]" >> "$GITHUB_OUTPUT"
+          echo "email=${id}+${APP_SLUG}[bot]@users.noreply.github.com" >> "$GITHUB_OUTPUT"
+
       - name: Commit to the update branch
         id: commit
         env:
+          GIT_AUTHOR_NAME: ${{ steps.bot.outputs.name }}
+          GIT_AUTHOR_EMAIL: ${{ steps.bot.outputs.email }}
+          GIT_COMMITTER_NAME: ${{ steps.bot.outputs.name }}
+          GIT_COMMITTER_EMAIL: ${{ steps.bot.outputs.email }}
           REPO_NAME: ${{ inputs.repo-name }}
           INTRO_PATH: ${{ inputs.docs-intro-path }}
           SOURCE: ${{ github.repository }}@${{ github.sha }}
@@ -187,8 +217,7 @@ jobs:
           fi
           version=$(python3 -c "import json,sys; print(json.load(open(sys.argv[1]))['source']['version'])" \
             "$(ls ../out/data/api/"$REPO_NAME"/*.json | head -1)")
-          git -c user.name="zymbit-docs-bot" -c user.email="code@zymbit.com" \
-            commit -q -m "docs(api): update $REPO_NAME to $version" -m "Extracted from $SOURCE by api-extractor."
+          git commit -q -m "docs(api): update $REPO_NAME to $version" -m "Extracted from $SOURCE by api-extractor."
           # The branch belongs to this workflow: it is rebuilt from main each run.
           git push --force origin HEAD:refs/heads/"$BRANCH"
           echo "changed=true" >> "$GITHUB_OUTPUT"
